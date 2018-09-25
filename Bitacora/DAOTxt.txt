@@ -1,0 +1,6 @@
+
+Fecha: 2018/09/23 16:57:21 Entrada: hola Algoritmo: en codificacion Salida: hola
+Fecha: 2018/09/23 17:01:34 Entrada: hola Algoritmo: en codificacion Salida: hola
+Fecha: 2018/09/23 17:01:49 Entrada: hola Algoritmo: en codificacion Salida: hola
+Fecha: 2018/09/23 17:36:05 Entrada: hola Algoritmo: en codificacion Salida: hola
+Fecha: 2018/09/23 17:36:56 Entrada: hola Algoritmo: en codificacion Salida: hola

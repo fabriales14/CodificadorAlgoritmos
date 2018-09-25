@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<BitacoraXML>
+<Elemento>
+<Fecha>2018/09/23 17:36:56</Fecha>
+<Entrada>hola</Entrada>
+<Algoritmo>El algoritmo</Algoritmo>
+<Codifica>true</Codifica>
+<Salida>hola</Salida>
+</Elemento>
+</BitacoraXML>
