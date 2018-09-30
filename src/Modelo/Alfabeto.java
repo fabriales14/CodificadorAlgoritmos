@@ -28,6 +28,38 @@ public class Alfabeto implements IValidable{
     public boolean validar(Object obj) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getSimbolos() {
+        return simbolos;
+    }
+
+    public void setSimbolos(String simbolos) {
+        this.simbolos = simbolos;
+    }
+
+    public String getSimbolos_ignorados() {
+        return simbolos_ignorados;
+    }
+
+    public void setSimbolos_ignorados(String simbolos_ignorados) {
+        this.simbolos_ignorados = simbolos_ignorados;
+    }
     
     
     

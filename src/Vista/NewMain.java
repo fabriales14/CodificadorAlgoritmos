@@ -5,7 +5,9 @@
  */
 package Vista;
 
+import Controlador.DAOAlfabetos;
 import Controlador.DTOAlgoritmos;
+import Modelo.Alfabeto;
 import Modelo.DAOPdf;
 import Modelo.DAOTxt;
 import Modelo.DAOXml;
@@ -22,15 +24,9 @@ public class NewMain {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        ArrayList<Integer> a = new ArrayList<>();
-        ArrayList<Integer> t = new ArrayList<>();
-        DTOAlgoritmos dto = new DTOAlgoritmos(0, "hola", "hola", a, t, true);
-        DAOPdf daopdf = new DAOPdf();
-        daopdf.guardar(dto);
-        DAOTxt dao = new DAOTxt();
-        dao.guardar(dto);
-        DAOXml daoxml = new DAOXml();
-        daoxml.guardar(dto);
+        Alfabeto a = new Alfabeto(1, "Universal", "abcdefg", " ");
+        DAOAlfabetos dao = new DAOAlfabetos();
+        dao.agregar(a);
     }
     
 }
