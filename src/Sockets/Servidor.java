@@ -92,6 +92,6 @@ private void procesePeticion(OBJ_Comp objeto) throws IOException, ClassNotFoundE
         objeto.setDatoEntrada(adm.enviar());
     }
     
-    // flujoSalida.writeObject(objeto);
+     flujoSalida.writeObject(objeto);
     }
 }
