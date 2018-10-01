@@ -18,7 +18,7 @@ public class AdmServidor {
     private Controlador controlador;
     public void recibir()
     {
-        System.out.println("aqui estoy");
+        System.out.println("");
     }
     
     public DTO_Comunicacion enviar(){
