@@ -7,8 +7,10 @@ package Controlador;
 
 import Modelo.Alfabeto;
 import Modelo.Algoritmo;
+import Modelo.CodificacionBinaria;
 import Modelo.CodigoTelefonico;
 import Modelo.IPersistencia;
+import Modelo.PalabraClave;
 import Modelo.Transposicion;
 import Modelo.Vigenere;
 import java.io.File;
@@ -72,6 +74,14 @@ public class Controlador implements IValidable {
                 CodigoTelefonico codigoTelefonico = new CodigoTelefonico();
                 codigoTelefonico.codificar(dto_algoritmos.getEntrada(), alfabetoActual);
             }
+            if (dto_algoritmos.getAlgoritmos().indexOf(3) >= 0) { // tiene el algoritmo 3: Codigo Binario
+                CodificacionBinaria codificacionBinaria = new CodificacionBinaria();
+                codificacionBinaria.codificar(dto_algoritmos.getEntrada(), alfabetoActual);
+            }
+            if (dto_algoritmos.getAlgoritmos().indexOf(4) >= 0) { // tiene el algoritmo 4: Palabra Clave
+                PalabraClave palabraClave = new PalabraClave();
+                palabraClave.codificar(dto_algoritmos.getEntrada(), alfabetoActual);
+            }
         } else {
             if (dto_algoritmos.getAlgoritmos().indexOf(0) >= 0) { // tiene el algoritmo 0: Vigenere
                 Vigenere vigenere = new Vigenere();
@@ -84,6 +94,14 @@ public class Controlador implements IValidable {
             if (dto_algoritmos.getAlgoritmos().indexOf(2) >= 0) { // tiene el algoritmo 2: Telefonico
                 CodigoTelefonico codigoTelefonico = new CodigoTelefonico();
                 codigoTelefonico.decodificar(dto_algoritmos.getEntrada(), alfabetoActual);
+            }
+            if (dto_algoritmos.getAlgoritmos().indexOf(3) >= 0) { // tiene el algoritmo 3: Codigo Binario
+                CodificacionBinaria codificacionBinaria = new CodificacionBinaria();
+                codificacionBinaria.decodificar(dto_algoritmos.getEntrada(), alfabetoActual);
+            }
+            if (dto_algoritmos.getAlgoritmos().indexOf(4) >= 0) { // tiene el algoritmo 4: Palabra Clave
+                PalabraClave palabraClave = new PalabraClave();
+                palabraClave.decodificar(dto_algoritmos.getEntrada(), alfabetoActual);
             }
 
         }
