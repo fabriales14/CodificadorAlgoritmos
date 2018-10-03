@@ -13,6 +13,7 @@ import Modelo.Transposicion;
 import Modelo.Vigenere;
 import java.io.File;
 import java.util.ArrayList;
+import libcomp.DTO_Comunicacion;
 
 /**
  *
@@ -54,7 +55,7 @@ public class Controlador implements IValidable {
         return listOfFiles;
     }
 
-    public void procesarPeticion(DTOAlgoritmos dto_algoritmos) {
+    public DTOAlgoritmos procesarPeticion(DTOAlgoritmos dto_algoritmos) {
 
         System.out.println("Ejecutando metodo procesarPeticion de clase Controlador");
 
@@ -86,6 +87,9 @@ public class Controlador implements IValidable {
             }
 
         }
+        
+        dto_algoritmos.setSalida("salida");
+        return dto_algoritmos;
     }
 
     private void predefinirAlfabeto(DTOAlgoritmos dto_algoritmos) {

@@ -71,8 +71,8 @@ public class Consola {
               lSalidas.add(Integer.valueOf(myInt)); 
             }   
         
-        DTOAlgoritmos DTO = new DTOAlgoritmos(Integer.parseInt(cbAlfabeto),vFraseOrigen,resultados,lAlgoritmos,lSalidas, codif);
-        controlador.procesarPeticion(DTO);
+    //    DTOAlgoritmos DTO = new DTOAlgoritmos(Integer.parseInt(cbAlfabeto),vFraseOrigen,resultados,lAlgoritmos,lSalidas, codif);
+    //    controlador.procesarPeticion(DTO);
         System.out.println("Se procesa el texto");
     }
     

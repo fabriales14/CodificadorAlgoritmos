@@ -5,20 +5,34 @@
  */
 package Sockets;
 
-import Controlador.Controlador;
 import java.util.ArrayList;
 import libcomp.Alfabeto;
 import libcomp.DTO_Comunicacion;
-
+import Controlador.*;
 /**
  *
  * @author melissavillalobos
  */
 public class AdmServidor {
     private Controlador controlador;
-    public void recibir()
+    public DTO_Comunicacion recibir(DTO_Comunicacion dto)
     {
-        System.out.println("");
+        int selectedAlfabeto = dto.getSelectedAlfabeto();
+        String entrada = dto.getEntrada();
+        boolean codificacion = dto.isCodificacion();
+        int extension = dto.getExtension();
+        ArrayList<Alfabeto> alfabetos= null; // quitar
+        int selectedMezcla = dto.getSelectedMezcla();
+        ArrayList<Integer> algoritmos = dto.getAlgoritmos();
+        ArrayList<Integer> tipos_salidas = dto.getTipos_salida();
+        DTOAlgoritmos DTOAlgoritmos = new DTOAlgoritmos(alfabetos, entrada, algoritmos, tipos_salidas, codificacion, extension, selectedAlfabeto, selectedMezcla);
+        DTOAlgoritmos = controlador.procesarPeticion(DTOAlgoritmos);
+        //cambiar esta parte.
+        ArrayList<String> salidas = new ArrayList();
+        salidas.add(DTOAlgoritmos.getSalida());
+        dto.setSalida(salidas);
+        System.out.println(dto.getSalida().get(0));// cambiar
+        return dto;
     }
     
     public DTO_Comunicacion enviar(){

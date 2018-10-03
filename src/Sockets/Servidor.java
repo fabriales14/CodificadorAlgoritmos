@@ -85,7 +85,7 @@ private void procesePeticion(OBJ_Comp objeto) throws IOException, ClassNotFoundE
     if (objeto.getAccion() == TipoAccion.Enviar_Datos){
         System.out.println("Atendiendo peticion...");
         objeto.getDatoEntrada();
-        adm.recibir();
+        adm.recibir(objeto.getDatoEntrada());
     }
     if (objeto.getAccion() == TipoAccion.Recibir_Datos){
         System.out.println("Atendiendo peticion 2...");
