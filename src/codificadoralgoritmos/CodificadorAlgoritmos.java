@@ -5,6 +5,7 @@
  */
 package codificadoralgoritmos;
 
+import Sockets.Servidor;
 import Vista.Consola;
 import Vista.GUI;
 import Vista.GUI;
@@ -18,11 +19,13 @@ public class CodificadorAlgoritmos {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
-        GUI gui = new GUI(); 
-        gui.setVisible (true); 
-        Consola consola = new Consola();
-        consola.consola();
+    public static void main(String[] args) throws ClassNotFoundException {
+       // GUI gui = new GUI(); 
+       // gui.setVisible (true); 
+       // Consola consola = new Consola();
+       // consola.consola();
+       Servidor  miServidor = new Servidor();
+       miServidor.inicialiceServidor();
     }
     
 }

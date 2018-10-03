@@ -25,9 +25,10 @@ public class Controlador implements IValidable {
     private Algoritmo algoritmo;
 
     public ArrayList cargarAlfabetos() {
-        ArrayList alfabeto = new ArrayList();
-        alfabeto.add("Universal");
-        return alfabeto;
+        ArrayList<libcomp.Alfabeto> alfabetoArray= new ArrayList();
+        libcomp.Alfabeto alfabeto = new libcomp.Alfabeto(1, "Universal", "abcd", " ");
+        alfabetoArray.add(alfabeto);
+        return alfabetoArray;
     }
 
     public ArrayList cargarSalidas() {
