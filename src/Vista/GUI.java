@@ -7,6 +7,7 @@ package Vista;
 
 import Controlador.Controlador;
 import Controlador.DTOAlgoritmos;
+import Modelo.Alfabeto;
 import java.awt.Desktop;
 import java.io.File;
 import java.io.IOException;
@@ -31,7 +32,8 @@ public class GUI extends javax.swing.JFrame {
         //cargar alfabeto, lgoritmos y tipos de salidasd
         ArrayList alfabetos = controlador.cargarAlfabetos();
         for(Object alfabeto : alfabetos) {
-                cbAlfabeto.addItem((String) alfabeto);
+            Alfabeto a = (Alfabeto) alfabeto;
+            cbAlfabeto.addItem((String) a.getNombre());
         }
         ///////////////////////////////////////////////////////
        
@@ -304,7 +306,7 @@ public class GUI extends javax.swing.JFrame {
     }//GEN-LAST:event_bitacorasMouseClicked
 
     private void botonAlfabetosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonAlfabetosActionPerformed
-        new UIAlfabeto().setVisible(true);
+        new UIAlfabeto(controlador).setVisible(true);
         this.dispose();
     }//GEN-LAST:event_botonAlfabetosActionPerformed
 

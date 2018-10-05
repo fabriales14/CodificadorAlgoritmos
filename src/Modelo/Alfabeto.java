@@ -26,7 +26,24 @@ public class Alfabeto implements IValidable{
 
     @Override
     public boolean validar(Object obj) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        Alfabeto alfabeto =  (Alfabeto) obj;
+        for (int i = 0; i < alfabeto.getSimbolos().length(); i++){
+            char caracter = alfabeto.getSimbolos().charAt(i);
+            int count = 0;
+            for (int j = 0; j < alfabeto.getSimbolos().length(); j++){
+                if (alfabeto.getSimbolos().charAt(j) == caracter)
+                    count++;
+            }
+            if (count >= 2)
+                return false;
+        }
+        for (int i = 0; i < alfabeto.getSimbolos_ignorados().length(); i++){
+            char c = alfabeto.getSimbolos_ignorados().charAt(i);
+            for (int j = 0; j < alfabeto.getSimbolos().length(); j++){
+                if (alfabeto.getSimbolos().charAt(j) == c)
+                    return false;
+            }
+        } return true;
     }
 
     public int getId() {

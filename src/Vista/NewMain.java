@@ -24,9 +24,13 @@ public class NewMain {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        Alfabeto a = new Alfabeto(1, "Universal", "abcdefg", " ");
+        Alfabeto a = new Alfabeto(2, "Universal", "abc", " ");
         DAOAlfabetos dao = new DAOAlfabetos();
+        System.out.println(dao.getAlfabetos().toString());
         dao.agregar(a);
+        a = new Alfabeto(1, "Universo", "abcdefgh", " ");
+        dao.modificar(1, a);
+        //dao.agregar(a);
     }
     
 }

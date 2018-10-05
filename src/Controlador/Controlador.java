@@ -23,11 +23,22 @@ public class Controlador implements IValidable {
     private Alfabeto alfabetoActual;
     private IPersistencia DTO;
     private Algoritmo algoritmo;
+    private DAOAlfabetos bdAlfabetos = new DAOAlfabetos();
 
     public ArrayList cargarAlfabetos() {
-        ArrayList alfabeto = new ArrayList();
-        alfabeto.add("Universal");
-        return alfabeto;
+        return bdAlfabetos.getAlfabetos();
+    }
+    
+    public boolean agregarAlfabeto(Alfabeto a){
+        return bdAlfabetos.agregar(a);
+    }
+    
+    public boolean modificarAlfabeto(int id, Alfabeto a){
+        return bdAlfabetos.modificar(id, a);
+    }
+    
+    public boolean eliminarAlfabeto(int id) {
+        return bdAlfabetos.eliminar(id);
     }
 
     public ArrayList cargarSalidas() {

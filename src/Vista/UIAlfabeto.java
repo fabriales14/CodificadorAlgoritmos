@@ -5,17 +5,41 @@
  */
 package Vista;
 
+import Controlador.Controlador;
+import Modelo.Alfabeto;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+import javax.swing.JPasswordField;
+import javax.swing.JTextArea;
+import javax.swing.JTextField;
+import javax.swing.table.DefaultTableModel;
+import javax.swing.table.TableModel;
+
 /**
  *
  * @author Usuario
  */
 public class UIAlfabeto extends javax.swing.JFrame {
 
+    Controlador controlador;
+
     /**
      * Creates new form UIAlfabeto
      */
-    public UIAlfabeto() {
+    public UIAlfabeto(Controlador controlador) {
+        this.controlador = controlador;
         initComponents();
+        cargarAlfabetos();
+    }
+
+    private void cargarAlfabetos() {
+        DefaultTableModel model = (DefaultTableModel) tablaAlfabetos.getModel();
+        for (Object a : controlador.cargarAlfabetos()) {
+            Alfabeto alfabeto = (Alfabeto) a;
+            Object[] row = {alfabeto.getId(), alfabeto.getNombre(), alfabeto.getSimbolos(), alfabeto.getSimbolos_ignorados()};
+            model.addRow(row);
+        }
     }
 
     /**
@@ -34,6 +58,16 @@ public class UIAlfabeto extends javax.swing.JFrame {
         botonVolver = new javax.swing.JButton();
         botonAgregar = new javax.swing.JButton();
         botonEliminar = new javax.swing.JButton();
+        botonModificar = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
+        id = new javax.swing.JTextField();
+        jLabel3 = new javax.swing.JLabel();
+        nombre = new javax.swing.JTextField();
+        jLabel4 = new javax.swing.JLabel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        simbolos = new javax.swing.JTextArea();
+        jLabel5 = new javax.swing.JLabel();
+        ignorados = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -54,7 +88,7 @@ public class UIAlfabeto extends javax.swing.JFrame {
                 java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
             };
             boolean[] canEdit = new boolean [] {
-                false, false, false, false
+                false, true, true, true
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -63,6 +97,11 @@ public class UIAlfabeto extends javax.swing.JFrame {
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {
                 return canEdit [columnIndex];
+            }
+        });
+        tablaAlfabetos.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                tablaAlfabetosMouseClicked(evt);
             }
         });
         jScrollPane1.setViewportView(tablaAlfabetos);
@@ -89,26 +128,67 @@ public class UIAlfabeto extends javax.swing.JFrame {
             }
         });
 
+        botonModificar.setText("Modificar");
+        botonModificar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonModificarActionPerformed(evt);
+            }
+        });
+
+        jLabel2.setText("ID:");
+
+        jLabel3.setText("Nombre:");
+
+        jLabel4.setText("Simbolos:");
+
+        simbolos.setColumns(20);
+        simbolos.setRows(5);
+        jScrollPane2.setViewportView(simbolos);
+
+        jLabel5.setText("Simbolos ignorados:");
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(23, 23, 23)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel1)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(jLabel2)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(id, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(jLabel3)
+                                .addGap(172, 172, 172)
+                                .addComponent(jLabel5)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(ignorados))))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(nombre, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
+                                .addGap(22, 22, 22)
+                                .addComponent(jLabel4)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 267, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(14, 14, 14)
                         .addComponent(botonAgregar)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(botonModificar)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(botonEliminar))
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
-                        .addGap(23, 23, 23)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 549, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jLabel1)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(botonVolver)))))
-                .addContainerGap(26, Short.MAX_VALUE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(botonVolver)
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 578, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -120,12 +200,26 @@ public class UIAlfabeto extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(botonVolver)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 397, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 304, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(14, 14, 14)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(botonAgregar)
-                    .addComponent(botonEliminar))
+                    .addComponent(jLabel2)
+                    .addComponent(id, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel3)
+                    .addComponent(nombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel5)
+                    .addComponent(ignorados, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addGap(20, 20, 20)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(botonAgregar)
+                            .addComponent(botonModificar)
+                            .addComponent(botonEliminar)))
+                    .addComponent(jLabel4)
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -144,11 +238,35 @@ public class UIAlfabeto extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void botonAgregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonAgregarActionPerformed
-        // TODO add your handling code here:
+        if (id.getText().equals("") || nombre.getText().equals("") || simbolos.getText().equals("") || ignorados.getText().equals("")) {
+            JOptionPane.showMessageDialog(this, "No ha ingresado todos los espacios", "ERROR", JOptionPane.ERROR_MESSAGE);
+        } else {
+            Alfabeto a = new Alfabeto(Integer.parseInt(id.getText()), nombre.getText(), simbolos.getText(), ignorados.getText());
+            if (a.validar(a) && controlador.agregarAlfabeto(a)) {
+                DefaultTableModel model = (DefaultTableModel) tablaAlfabetos.getModel();
+                Object[] row = {a.getId(), a.getNombre(), a.getSimbolos(), a.getSimbolos_ignorados()};
+                model.addRow(row);
+                id.setText("");
+                nombre.setText("");
+                simbolos.setText("");
+                ignorados.setText("");
+            } else {
+                JOptionPane.showMessageDialog(this, "No agregado", "ERROR", JOptionPane.ERROR_MESSAGE);
+            }
+        }
+        id.setText("");
+        nombre.setText("");
+        simbolos.setText("");
+        ignorados.setText("");
     }//GEN-LAST:event_botonAgregarActionPerformed
 
     private void botonEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonEliminarActionPerformed
-        // TODO add your handling code here:
+        int fila = tablaAlfabetos.getSelectedRow();
+        if (fila >= 0) {
+            if (controlador.eliminarAlfabeto((int) tablaAlfabetos.getValueAt(fila, 0))){
+                ((DefaultTableModel) tablaAlfabetos.getModel()).removeRow(fila);
+            }
+        }
     }//GEN-LAST:event_botonEliminarActionPerformed
 
     private void botonVolverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonVolverActionPerformed
@@ -156,14 +274,56 @@ public class UIAlfabeto extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_botonVolverActionPerformed
 
+    private void botonModificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonModificarActionPerformed
+        int fila = tablaAlfabetos.getSelectedRow();
+        if (fila >= 0) {
+            if (nombre.getText().equals("") || simbolos.getText().equals("") || ignorados.getText().equals("")) {
+                JOptionPane.showMessageDialog(this, "No ha ingresado todos los espacios", "ERROR", JOptionPane.ERROR_MESSAGE);
+            } else {
+                Alfabeto a = new Alfabeto((int) tablaAlfabetos.getValueAt(fila, 0), nombre.getText(), simbolos.getText(), ignorados.getText());
+                if (a.validar(a) && controlador.modificarAlfabeto(a.getId(), a)) {
+                    tablaAlfabetos.getModel().setValueAt(a.getNombre(), fila, 1);
+                    tablaAlfabetos.getModel().setValueAt(a.getSimbolos(), fila, 2);
+                    tablaAlfabetos.getModel().setValueAt(a.getSimbolos_ignorados(), fila, 3);
+                } else {
+                    JOptionPane.showMessageDialog(this, "No modifcado", "ERROR", JOptionPane.ERROR_MESSAGE);
+                }
+            }
+        }
+        id.setText("");
+        nombre.setText("");
+        simbolos.setText("");
+        ignorados.setText("");
+    }//GEN-LAST:event_botonModificarActionPerformed
+
+    private void tablaAlfabetosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tablaAlfabetosMouseClicked
+        int fila = tablaAlfabetos.getSelectedRow();
+        if (fila >= 0) {
+            id.setText(String.valueOf(tablaAlfabetos.getValueAt(fila, 0)));
+            nombre.setText((String) tablaAlfabetos.getValueAt(fila, 1));
+            simbolos.setText((String) tablaAlfabetos.getValueAt(fila, 2));
+            ignorados.setText((String) tablaAlfabetos.getValueAt(fila, 3));
+        }
+    }//GEN-LAST:event_tablaAlfabetosMouseClicked
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton botonAgregar;
     private javax.swing.JButton botonEliminar;
+    private javax.swing.JButton botonModificar;
     private javax.swing.JButton botonVolver;
+    private javax.swing.JTextField id;
+    private javax.swing.JTextField ignorados;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JTextField nombre;
+    private javax.swing.JTextArea simbolos;
     private javax.swing.JTable tablaAlfabetos;
     // End of variables declaration//GEN-END:variables
 }
