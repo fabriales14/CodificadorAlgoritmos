@@ -7,6 +7,8 @@ package Vista;
 
 import Controlador.DAOAlfabetos;
 import Controlador.DTOAlgoritmos;
+import Controlador.DirectorHilera;
+import Controlador.noConNoDup;
 import Modelo.Alfabeto;
 import Modelo.DAOPdf;
 import Modelo.DAOTxt;
@@ -31,6 +33,10 @@ public class NewMain {
         a = new Alfabeto(1, "Universo", "abcdefgh", " ");
         dao.modificar(1, a);
         //dao.agregar(a);
+        
+        DirectorHilera dir = new DirectorHilera(new noConNoDup(a));
+        dir.BuildHilera(5);
+        System.out.println(dir.getHilera());
     }
     
 }

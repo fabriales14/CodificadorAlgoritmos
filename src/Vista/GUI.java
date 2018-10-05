@@ -273,13 +273,13 @@ public class GUI extends javax.swing.JFrame {
             salidas.add(i);
         }
         //Toma todos los datos y se les aplica al DTO.
-        DTOAlgoritmos DTO = new DTOAlgoritmos(cbAlfabeto.getWidth(), vFraseOrigen.getText(),taResultados.getText(), algoritmos,
-            salidas,modoCodificacion.isSelected());
+ //       DTOAlgoritmos DTO = new DTOAlgoritmos(cbAlfabeto.getWidth(), vFraseOrigen.getText(),taResultados.getText(), algoritmos,
+ //           salidas,modoCodificacion.isSelected());
 
         System.out.println("Se crea el DTO con los datos necesarios");
 
         //El controlador procesa la petición.
-        controlador.procesarPeticion(DTO);
+  //      controlador.procesarPeticion(DTO);
 
         taResultados.setText("Se procesan las salidas");
     }//GEN-LAST:event_AceptarButtonActionPerformed

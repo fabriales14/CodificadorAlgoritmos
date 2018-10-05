@@ -78,6 +78,21 @@ public class Alfabeto implements IValidable{
         this.simbolos_ignorados = simbolos_ignorados;
     }
     
+    public int cantidadSimbolos(){
+        return simbolos.length();
+    }
+    
+    public char getSimboloAt(int pos){
+        return simbolos.charAt(pos);
+    }
+    
+    public boolean esConsecutivo(char anterior, char siguiente){
+        
+        int posAnterior = simbolos.indexOf(String.valueOf(anterior));
+        int posSiguiente = simbolos.indexOf(String.valueOf(siguiente));
+        
+        return posAnterior+1 == posSiguiente || posSiguiente+1 == posAnterior;       
+    }
     
     
 }

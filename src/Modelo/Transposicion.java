@@ -15,16 +15,40 @@ public class Transposicion extends Algoritmo{
 
     @Override
     public String codificar(String mensaje, Alfabeto alfabeto) {
-        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-        JOptionPane.showMessageDialog(null, "Aquí se codificará el algoritmo de Transposición.", "Codificación", JOptionPane.INFORMATION_MESSAGE);
+        String result = "";
+        String[] palabras = mensaje.split(" ");
+        
+        for(String m : palabras){
+            String palabraVuelta = new StringBuilder(m).reverse().toString();
+            result = result + palabraVuelta + " ";
+        }
+        
+        System.out.println(result);
+        JOptionPane.showMessageDialog(null, result);
+        return result;
+    }
+    
+    public String tomaPalabra(String frase){
         return null;
+    }
+    
+    public boolean es1palabra(String frase){
+        return true;
     }
 
     @Override
     public String decodificar(String mensaje, Alfabeto alfabeto) {
-        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-        JOptionPane.showMessageDialog(null, "Aquí se decodificará el algoritmo de Transposición.", "Deodificación", JOptionPane.INFORMATION_MESSAGE);
-        return null;
+        String result = "";
+        String[] palabras = mensaje.split(" ");
+        
+        for(String m : palabras){
+            String palabraVuelta = new StringBuilder(m).reverse().toString();
+            result = result + palabraVuelta + " ";
+        }
+        
+        System.out.println(result);
+        JOptionPane.showMessageDialog(null, result);
+        return result;
     }
     
 }
