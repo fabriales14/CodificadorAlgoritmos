@@ -7,7 +7,6 @@ package Vista;
 
 import Controlador.Controlador;
 import Controlador.DTOAlgoritmos;
-import Modelo.Alfabeto;
 import java.awt.Desktop;
 import java.io.File;
 import java.io.IOException;
@@ -15,6 +14,8 @@ import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.DefaultListModel;
+import libcomp.Alfabeto;
+import libcomp.DTO_Comunicacion;
 
 
 /**
@@ -264,14 +265,20 @@ public class GUI extends javax.swing.JFrame {
 
     private void AceptarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AceptarButtonActionPerformed
         //Crea un DTO para guardar los datos.
-        ArrayList<Integer> algoritmos = new ArrayList<>();
-        for (int i : lAlgoritmos.getSelectedIndices()) {
+        ArrayList<String> algoritmos = new ArrayList<>();
+        for (String i : lAlgoritmos.getSelectedValuesList()) {
             algoritmos.add(i);
         }
-        ArrayList<Integer> salidas = new ArrayList<>();
-        for (int i : lSalidas1.getSelectedIndices()) {
+        ArrayList<String> salidas = new ArrayList<>();
+        for (String i : lSalidas1.getSelectedValuesList()) {
             salidas.add(i);
         }
+        DTO_Comunicacion datos = new DTO_Comunicacion(new ArrayList<Alfabeto>(), salidas , algoritmos, null);
+        Alfabeto a = new Alfabeto(0, null, null, null);
+        a.setNombre(cbAlfabeto.getSelectedItem().toString());
+        datos.getAlfabetos().add(a);
+        datos.setEntrada(vFraseOrigen.getText());
+        datos.setCodificacion(!modoCodificacion.isSelected());
         //Toma todos los datos y se les aplica al DTO.
  //       DTOAlgoritmos DTO = new DTOAlgoritmos(cbAlfabeto.getWidth(), vFraseOrigen.getText(),taResultados.getText(), algoritmos,
  //           salidas,modoCodificacion.isSelected());
@@ -279,7 +286,7 @@ public class GUI extends javax.swing.JFrame {
         System.out.println("Se crea el DTO con los datos necesarios");
 
         //El controlador procesa la petición.
-  //      controlador.procesarPeticion(DTO);
+        controlador.procesarPeticion(datos);
 
         taResultados.setText("Se procesan las salidas");
     }//GEN-LAST:event_AceptarButtonActionPerformed

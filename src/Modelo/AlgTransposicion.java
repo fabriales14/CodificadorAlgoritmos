@@ -11,10 +11,9 @@ import javax.swing.JOptionPane;
  *
  * @author Meli
  */
-public class Transposicion extends Algoritmo{
+public class AlgTransposicion extends StrategyAlgoritmo{
 
-    @Override
-    public String codificar(String mensaje, Alfabeto alfabeto) {
+    public String codificar(String mensaje, libcomp.Alfabeto alfabeto) {
         String result = "";
         String[] palabras = mensaje.split(" ");
         
@@ -23,7 +22,7 @@ public class Transposicion extends Algoritmo{
             result = result + palabraVuelta + " ";
         }
         
-        System.out.println(result);
+        //System.out.println(result);
         JOptionPane.showMessageDialog(null, result);
         return result;
     }
@@ -36,8 +35,7 @@ public class Transposicion extends Algoritmo{
         return true;
     }
 
-    @Override
-    public String decodificar(String mensaje, Alfabeto alfabeto) {
+    public String decodificar(String mensaje, libcomp.Alfabeto alfabeto) {
         String result = "";
         String[] palabras = mensaje.split(" ");
         
@@ -46,9 +44,17 @@ public class Transposicion extends Algoritmo{
             result = result + palabraVuelta + " ";
         }
         
-        System.out.println(result);
+        //System.out.println(result);
         JOptionPane.showMessageDialog(null, result);
         return result;
     }
+
+    @Override
+    public String procesar(String mensaje, libcomp.Alfabeto alfabeto, boolean codificar) {
+        if (codificar){
+            return codificar(mensaje,alfabeto);
+        }return decodificar(mensaje, alfabeto);
+    }
+    
     
 }

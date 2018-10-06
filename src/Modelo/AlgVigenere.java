@@ -1,19 +1,21 @@
+package Modelo;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Modelo;
+//package Modelo;
 
 import javax.swing.JOptionPane;
+import libcomp.Alfabeto;
 
 /**
  *
  * @author Meli
  */
-public class Vigenere extends Algoritmo{
+public class AlgVigenere extends StrategyAlgoritmo{
 
-    @Override
     public String codificar(String mensaje, Alfabeto alfabeto) {
                 String cifras = mensaje.substring(0, 2);
         
@@ -82,13 +84,12 @@ public class Vigenere extends Algoritmo{
             mensajito= mensajito.substring(1, mensajito.length());
         }
         
-        System.out.println(result);
+        //System.out.println(result);
         JOptionPane.showMessageDialog(null, result);
         return result;
 
     }
 
-    @Override
     public String decodificar(String mensaje, Alfabeto alfabeto) {
         String cifras = mensaje.substring(0, 2);
         String cifra1 = cifras.substring(0,1);
@@ -150,9 +151,17 @@ public class Vigenere extends Algoritmo{
             mensajito= mensajito.substring(1, mensajito.length());
         }
         
-        System.out.println(result);
+        //System.out.println(result);
         JOptionPane.showMessageDialog(null, result);
         return result;
+    }
+    
+    
+    @Override
+    public String procesar(String mensaje, Alfabeto alfabeto, boolean codificar){
+        if (codificar){
+            return codificar(mensaje,alfabeto);
+        }return decodificar(mensaje, alfabeto);
     }
     
 }

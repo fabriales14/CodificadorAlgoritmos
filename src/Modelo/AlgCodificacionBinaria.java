@@ -14,10 +14,9 @@ import javax.swing.JOptionPane;
  *
  * @author Bryan
  */
-public class CodificacionBinaria extends Algoritmo{
+public class AlgCodificacionBinaria extends StrategyAlgoritmo{
 
-    @Override
-    public String codificar(String mensaje, Alfabeto alfabeto) {
+    public String codificar(String mensaje, libcomp.Alfabeto alfabeto) {
         String mensajito = mensaje.toLowerCase();
         String result="";
 
@@ -25,14 +24,13 @@ public class CodificacionBinaria extends Algoritmo{
             result = result + codigoBin(mensajito.substring(i, i+1));
         }
         
-        System.out.println(result);
+        //System.out.println(result);
         JOptionPane.showMessageDialog(null, result);
         return result;
 
     }
 
-    @Override
-    public String decodificar(String mensaje, Alfabeto alfabeto) {
+    public String decodificar(String mensaje, libcomp.Alfabeto alfabeto) {
         String result="";
         String mensajito = mensaje.toLowerCase();
 
@@ -43,7 +41,7 @@ public class CodificacionBinaria extends Algoritmo{
             result= result + obtenerLetra(s);
         }
 
-        System.out.println(result);
+        //System.out.println(result);
         JOptionPane.showMessageDialog(null, result);
         return result;
     }
@@ -56,15 +54,15 @@ public class CodificacionBinaria extends Algoritmo{
                 "01110 ", "01111 ", "10000 ","10001 ","10010 ", "10011 ","10100 ","10101 ","10110 ","10111 ","11000 ","11001 "," * ");
         if(listaCode.contains(entrada)){//si la lista tiene la letra
             int indice = listaCode.indexOf(entrada);
-            System.out.println(indice);
+            //System.out.println(indice);
             result = listaLetras.get(indice);
         }
         else if(listaLetras.contains(entrada)){//si la lista tiene la letra
             int indice = listaLetras.indexOf(entrada);
-            System.out.println(indice);
+            //System.out.println(indice);
             result = listaCode.get(indice);
         }
-        System.out.println(result);
+        //System.out.println(result);
         return result;
     }
     
@@ -75,17 +73,21 @@ public class CodificacionBinaria extends Algoritmo{
                 "01110", "01111", "10000","10001","10010", "10011","10100","10101","10110","10111","11000","11001","*");
         if(listaCode.contains(entrada)){//si la lista tiene la letra
             int indice = listaCode.indexOf(entrada);
-            System.out.println(indice);
+            //System.out.println(indice);
             result = listaLetras.get(indice);
         }
         else if(listaLetras.contains(entrada)){//si la lista tiene la letra
             int indice = listaLetras.indexOf(entrada);
-            System.out.println(indice);
+            //System.out.println(indice);
             result = listaCode.get(indice);
         }
         return result;
     }
 
-
-    
+    @Override
+    public String procesar(String mensaje, libcomp.Alfabeto alfabeto, boolean codificar){
+        if (codificar){
+            return codificar(mensaje,alfabeto);
+        }return decodificar(mensaje, alfabeto);
+    }
 }

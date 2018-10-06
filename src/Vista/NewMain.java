@@ -9,12 +9,12 @@ import Controlador.DAOAlfabetos;
 import Controlador.DTOAlgoritmos;
 import Controlador.DirectorHilera;
 import Controlador.noConNoDup;
-import Modelo.Alfabeto;
 import Modelo.DAOPdf;
 import Modelo.DAOTxt;
 import Modelo.DAOXml;
-import Modelo.Transposicion;
+import Modelo.AlgTransposicion;
 import java.util.ArrayList;
+import libcomp.Alfabeto;
 
 /**
  *
@@ -34,9 +34,9 @@ public class NewMain {
         dao.modificar(1, a);
         //dao.agregar(a);
         
-        DirectorHilera dir = new DirectorHilera(new noConNoDup(a));
-        dir.BuildHilera(5);
-        System.out.println(dir.getHilera());
+        //DirectorHilera dir = new DirectorHilera(new noConNoDup(a));
+        //dir.BuildHilera(5);
+        //System.out.println(dir.getHilera());
     }
     
 }

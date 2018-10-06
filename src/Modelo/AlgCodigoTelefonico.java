@@ -14,10 +14,9 @@ import javax.swing.JOptionPane;
  *
  * @author Meli
  */
-public class CodigoTelefonico extends Algoritmo{
+public class AlgCodigoTelefonico extends StrategyAlgoritmo{
 
-    @Override
-    public String codificar(String mensaje, Alfabeto alfabeto) {
+    public String codificar(String mensaje, libcomp.Alfabeto alfabeto) {
         String mensajito = mensaje.toLowerCase();
         String result="";
 
@@ -25,14 +24,13 @@ public class CodigoTelefonico extends Algoritmo{
             result = result + codigoTelf(mensajito.substring(i, i+1));
         }
         
-        System.out.println(result);
+        //System.out.println(result);
         JOptionPane.showMessageDialog(null, result);
         return result;
 
     }
 
-    @Override
-    public String decodificar(String mensaje, Alfabeto alfabeto) {
+    public String decodificar(String mensaje, libcomp.Alfabeto alfabeto) {
         String result="";
         String mensajito = mensaje.toLowerCase();
 
@@ -42,7 +40,7 @@ public class CodigoTelefonico extends Algoritmo{
             result= result + obtenerLetra(s);
         }
 
-        System.out.println(result);
+        //System.out.println(result);
         JOptionPane.showMessageDialog(null, result);
         return result;
     }
@@ -85,5 +83,11 @@ public class CodigoTelefonico extends Algoritmo{
         return result;
     }
 
-    
+    @Override
+    public String procesar(String mensaje, libcomp.Alfabeto alfabeto, boolean codificar){
+        if (codificar){
+            return codificar(mensaje,alfabeto);
+        }return decodificar(mensaje, alfabeto);
+    }
+
 }

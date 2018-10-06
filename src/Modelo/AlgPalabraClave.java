@@ -15,21 +15,20 @@ import javax.swing.JOptionPane;
  *
  * @author Bryan
  */
-public class PalabraClave extends Algoritmo{
+public class AlgPalabraClave extends StrategyAlgoritmo{
 
-    @Override
-    public String codificar(String mensaje, Alfabeto alfabeto) {
+    public String codificar(String mensaje, libcomp.Alfabeto alfabeto) {
         String result = "";
         String mensajito = mensaje.toLowerCase();
         List<String> mensajitos = new ArrayList<>(Arrays.asList(mensajito.split(" ")));
         String palabraClave = mensajitos.get(0);
         mensajito = mensajito.substring(palabraClave.length()+1, mensajito.length());
         
-        System.out.print("palabraClave ");
-        System.out.println(palabraClave);
+        //System.out.print("palabraClave ");
+        //System.out.println(palabraClave);
         
-        System.out.print("mensajito ");
-        System.out.println(mensajito);
+        //System.out.print("mensajito ");
+        //System.out.println(mensajito);
         
         int banderaPalabra = 0; //bandera de n estados que permite ver en cuál letra se ubica dentro de la palabra clave
         
@@ -58,19 +57,18 @@ public class PalabraClave extends Algoritmo{
         return result;
     }
 
-    @Override
-    public String decodificar(String mensaje, Alfabeto alfabeto) {
+    public String decodificar(String mensaje, libcomp.Alfabeto alfabeto) {
         String result = "";
         String mensajito = mensaje.toLowerCase();
         List<String> mensajitos = new ArrayList<>(Arrays.asList(mensajito.split(" ")));
         String palabraClave = mensajitos.get(0);
         mensajito = mensajito.substring(palabraClave.length()+1, mensajito.length());
         
-        System.out.print("palabraClave ");
-        System.out.println(palabraClave);
+        //System.out.print("palabraClave ");
+        //System.out.println(palabraClave);
         
-        System.out.print("mensajito ");
-        System.out.println(mensajito);
+        //System.out.print("mensajito ");
+        //System.out.println(mensajito);
         
         int banderaPalabra = 0; //bandera de n estados que permite ver en cuál letra se ubica dentro de la palabra clave
         
@@ -111,5 +109,12 @@ public class PalabraClave extends Algoritmo{
     public String textoLetra(int numero){ //funcion que sirve para convertir el número en la letra que corresponde
         List<String> listaLetras = Arrays.asList("a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z");                
         return listaLetras.get(numero-1);
+    }
+
+    @Override
+    public String procesar(String mensaje, libcomp.Alfabeto alfabeto, boolean codificar) {
+        if (codificar){
+            return codificar(mensaje,alfabeto);
+        }return decodificar(mensaje, alfabeto);
     }
 }

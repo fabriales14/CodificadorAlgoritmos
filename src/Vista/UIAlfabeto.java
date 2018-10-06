@@ -6,7 +6,6 @@
 package Vista;
 
 import Controlador.Controlador;
-import Modelo.Alfabeto;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
@@ -15,6 +14,7 @@ import javax.swing.JTextArea;
 import javax.swing.JTextField;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableModel;
+import libcomp.Alfabeto;
 
 /**
  *
@@ -242,7 +242,7 @@ public class UIAlfabeto extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(this, "No ha ingresado todos los espacios", "ERROR", JOptionPane.ERROR_MESSAGE);
         } else {
             Alfabeto a = new Alfabeto(Integer.parseInt(id.getText()), nombre.getText(), simbolos.getText(), ignorados.getText());
-            if (a.validar(a) && controlador.agregarAlfabeto(a)) {
+            if (controlador.agregarAlfabeto(a)) {
                 DefaultTableModel model = (DefaultTableModel) tablaAlfabetos.getModel();
                 Object[] row = {a.getId(), a.getNombre(), a.getSimbolos(), a.getSimbolos_ignorados()};
                 model.addRow(row);
@@ -281,7 +281,7 @@ public class UIAlfabeto extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(this, "No ha ingresado todos los espacios", "ERROR", JOptionPane.ERROR_MESSAGE);
             } else {
                 Alfabeto a = new Alfabeto((int) tablaAlfabetos.getValueAt(fila, 0), nombre.getText(), simbolos.getText(), ignorados.getText());
-                if (a.validar(a) && controlador.modificarAlfabeto(a.getId(), a)) {
+                if (controlador.modificarAlfabeto(a.getId(), a)) {
                     tablaAlfabetos.getModel().setValueAt(a.getNombre(), fila, 1);
                     tablaAlfabetos.getModel().setValueAt(a.getSimbolos(), fila, 2);
                     tablaAlfabetos.getModel().setValueAt(a.getSimbolos_ignorados(), fila, 3);

@@ -1,18 +1,19 @@
+
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
 package Modelo;
+import libcomp.Alfabeto;
 
 /**
  *
  * @author Meli
  */
-public abstract class Algoritmo {
+public abstract class StrategyAlgoritmo {
     
-    public abstract String codificar(String mensaje, Alfabeto alfabeto);
-    
-    public abstract String decodificar(String mensaje, Alfabeto alfabeto);
+    public abstract String procesar(String mensaje, Alfabeto alfabeto, boolean codificar);
     
 }

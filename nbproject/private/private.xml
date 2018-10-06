@@ -2,6 +2,14 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group/>
+        <group>
+            <file>file:/C:/Users/Usuario/Desktop/CodificadorAlgoritmos/src/Sockets/Servidor.java</file>
+            <file>file:/C:/Users/Usuario/Desktop/CodificadorAlgoritmos/src/Vista/GUI.java</file>
+            <file>file:/C:/Users/Usuario/Desktop/CodificadorAlgoritmos/src/Modelo/AlgCodificacionBinaria.java</file>
+            <file>file:/C:/Users/Usuario/Desktop/CodificadorAlgoritmos/src/Controlador/DAOAlfabetos.java</file>
+            <file>file:/C:/Users/Usuario/Desktop/CodificadorAlgoritmos/src/codificadoralgoritmos/CodificadorAlgoritmos.java</file>
+            <file>file:/C:/Users/Usuario/Desktop/CodificadorAlgoritmos/src/Modelo/AlgVigenere.java</file>
+            <file>file:/C:/Users/Usuario/Desktop/CodificadorAlgoritmos/src/Controlador/Controlador.java</file>
+        </group>
     </open-files>
 </project-private>

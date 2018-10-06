@@ -24,8 +24,8 @@ public class CodificadorAlgoritmos {
        gui.setVisible (true); 
        // Consola consola = new Consola();
        // consola.consola();
-       Servidor  miServidor = new Servidor();
-       miServidor.inicialiceServidor();
+        Servidor  miServidor = new Servidor();
+        miServidor.inicialiceServidor();
     }
     
 }
