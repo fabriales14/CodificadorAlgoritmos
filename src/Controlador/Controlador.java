@@ -58,7 +58,7 @@ public class Controlador implements IValidable {
 
     public ArrayList cargarAlgoritmos() {
         ArrayList<String> archivos = new ArrayList<>();
-        File folder = new File("src\\Modelo");
+        File folder = new File("src/Modelo");
         File[] listOfFiles = folder.listFiles();
         for (File file: listOfFiles){
             String nombre = file.getName();
