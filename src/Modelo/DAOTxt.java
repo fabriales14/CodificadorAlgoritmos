@@ -13,9 +13,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import jdk.jfr.events.FileWriteEvent;
+import libcomp.DTO_Comunicacion;
 
 /**
  *
@@ -24,7 +22,7 @@ import jdk.jfr.events.FileWriteEvent;
 public class DAOTxt implements IPersistencia {
 
     @Override
-    public boolean guardar(DTOAlgoritmos dto_algoritmos) {
+    public boolean guardar(DTO_Comunicacion dto_algoritmos) {
         File archivoTxt = new File("Bitacora/DAOTxt.txt");
         //escritura
         try {
@@ -37,13 +35,15 @@ public class DAOTxt implements IPersistencia {
             // inserta en archivo txt
             pw.append("Fecha: " + sdf.format(cal.getTime()) + " ");
             pw.append("Entrada: " + dto_algoritmos.getEntrada() + " ");
-            pw.append("Algoritmo: "); //falta nombre algoritmo, no me quedo claro el manejo
+            pw.append("Algoritmos y salidas: \n");
+            for (int i=0; i<dto_algoritmos.getTipos_algoritmos().size(); i++){
+                pw.append(dto_algoritmos.getTipos_algoritmos().get(i) + ": " + dto_algoritmos.getSalida().get(i));
+            }
             if (dto_algoritmos.isCodificacion()) {
                 pw.append("en codificacion ");
             } else {
                 pw.append("en decodificacion ");
             }
-            pw.append("Salida: " + dto_algoritmos.getSalida());
             pw.close();
             bw.close();
         } catch (IOException ex) {

@@ -9,8 +9,6 @@ import Controlador.DTOAlgoritmos;
 import com.itextpdf.text.Document;
 import com.itextpdf.text.DocumentException;
 import com.itextpdf.text.Element;
-import com.itextpdf.text.Font;
-import com.itextpdf.text.Font.FontFamily;
 import com.itextpdf.text.Paragraph;
 import com.itextpdf.text.pdf.PdfContentByte;
 import com.itextpdf.text.pdf.PdfImportedPage;
@@ -21,6 +19,7 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import libcomp.DTO_Comunicacion;
 
 /**
  *
@@ -29,7 +28,7 @@ import java.util.logging.Logger;
 public class DAOPdf implements IPersistencia {
 
     @Override
-    public boolean guardar(DTOAlgoritmos dto_algoritmos) {
+    public boolean guardar(DTO_Comunicacion dto_algoritmos) {
         File f = new File("Bitacora/DAOPdf.pdf");
         if (f.exists() && !f.isDirectory()) {
             Document document = new Document();
@@ -49,13 +48,15 @@ public class DAOPdf implements IPersistencia {
                 SimpleDateFormat sdf = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss"); //define formato para fecha y hora
                 p.add("Fecha: " + sdf.format(cal.getTime()) + '\n');
                 p.add("Entrada: " + dto_algoritmos.getEntrada() + '\n');
-                p.add("Algoritmo: ");
+                p.add("Algoritmos y salidas: \n");
+                for (int i = 0; i < dto_algoritmos.getTipos_algoritmos().size(); i++) {
+                    p.add(dto_algoritmos.getTipos_algoritmos().get(i) + ": " + dto_algoritmos.getSalida().get(i));
+                }
                 if (dto_algoritmos.isCodificacion()) {
                     p.add("en codificacion\n");
                 } else {
                     p.add("en decodificacion\n");
                 }
-                p.add("Salida: " + dto_algoritmos.getSalida());
                 p.setAlignment(Element.ALIGN_CENTER);
                 document.add(p);
                 document.close();
@@ -70,20 +71,22 @@ public class DAOPdf implements IPersistencia {
         } else {
             Document document = new Document();
             try {
-                PdfWriter.getInstance(document, new FileOutputStream(new File("DAOPdf.pdf")));
+                PdfWriter.getInstance(document, new FileOutputStream(new File("Bitacora/DAOPdf.pdf")));
                 document.open();
                 Paragraph p = new Paragraph();
                 Calendar cal = Calendar.getInstance();
                 SimpleDateFormat sdf = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss"); //define formato para fecha y hora
                 p.add("Fecha: " + sdf.format(cal.getTime()) + '\n');
                 p.add("Entrada: " + dto_algoritmos.getEntrada() + '\n');
-                p.add("Algoritmo: ");
+                p.add("Algoritmos y salidas: \n");
+                for (int i = 0; i < dto_algoritmos.getTipos_algoritmos().size(); i++) {
+                    p.add(dto_algoritmos.getTipos_algoritmos().get(i) + ": " + dto_algoritmos.getSalida().get(i));
+                }
                 if (dto_algoritmos.isCodificacion()) {
                     p.add("en codificacion\n");
                 } else {
                     p.add("en decodificacion\n");
                 }
-                p.add("Salida: " + dto_algoritmos.getSalida());
                 p.setAlignment(Element.ALIGN_CENTER);
                 document.add(p);
                 document.close();

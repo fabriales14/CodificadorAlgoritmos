@@ -5,12 +5,12 @@
  */
 package Modelo;
 
-import Controlador.DTOAlgoritmos;
+import libcomp.DTO_Comunicacion;
 
 /**
  *
  * @author Meli
  */
 public interface IPersistencia {
-    public boolean guardar(DTOAlgoritmos dto_algoritmos);
+    public boolean guardar(DTO_Comunicacion dto_algoritmos);
 }

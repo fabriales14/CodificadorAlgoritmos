@@ -24,82 +24,51 @@ public class AlgPalabraClave extends StrategyAlgoritmo{
     
     public String codificar(String mensaje, libcomp.Alfabeto alfabeto) {
         String result = "";
-        String mensajito = mensaje.toLowerCase();
-        List<String> mensajitos = new ArrayList<>(Arrays.asList(mensajito.split(" ")));
-        String palabraClave = mensajitos.get(0);
-        mensajito = mensajito.substring(palabraClave.length()+1, mensajito.length());
+        String simbolos = alfabeto.getSimbolos();
+        List<String> palabras = new ArrayList<>(Arrays.asList(mensaje.split(" ")));
         
-        
-        //System.out.print("palabraClave ");
-        //System.out.println(palabraClave);
-        
-        //System.out.print("mensajito ");
-        //System.out.println(mensajito);
-        
-        int banderaPalabra = 0; //bandera de n estados que permite ver en cuál letra se ubica dentro de la palabra clave
-        
-        List<String> listaPalabra = new ArrayList<>();  // lista que guarda cada caracter de la palabra clave
-        for(int e =0; e<palabraClave.length(); e++){
-            listaPalabra.add(palabraClave.substring(e, e+1));
+        for (String palabra : palabras){
+            for (int i=0; i<palabra.length(); i++){
+                for (int j=0; j<Palabra_Clave.length(); j++){
+                    int pos = simbolos.indexOf(palabra.charAt(i))+1 + simbolos.indexOf(Palabra_Clave.charAt(j))+1;
+                    if (pos > simbolos.length()){
+                        pos -= simbolos.length();
+                    }
+                    result += getCharAt(pos, simbolos);
+                    i++;
+                    if (i >= palabra.length()){
+                        j = Palabra_Clave.length();
+                    }
+                } i--;
+            } result += " "; 
         }
-        
-        for(int e=0; e<mensajito.length(); e++){
-            //agarro el caracter
-            String caracter = mensajito.substring(e, e+1);
-            
-            if (" ".equals(caracter)){
-                result = result + " ";
-                banderaPalabra=0;
-            }
-            else{
-                int numeroNuevaLetra = (obtenerNumeroLetra(caracter)+obtenerNumeroLetra(palabraClave.substring(banderaPalabra,banderaPalabra+1)));
-                numeroNuevaLetra=numeroNuevaLetra%26;
-                banderaPalabra=(banderaPalabra+1)%palabraClave.length();
-                result = result + textoLetra(numeroNuevaLetra);
-            }
-        }
-        
-        JOptionPane.showMessageDialog(null, result);
         return result;
+    }
+    
+    public char getCharAt(int index, String simbolos){
+        return simbolos.charAt(index-1);
     }
 
     public String decodificar(String mensaje, libcomp.Alfabeto alfabeto) {
         String result = "";
-        String mensajito = mensaje.toLowerCase();
-        List<String> mensajitos = new ArrayList<>(Arrays.asList(mensajito.split(" ")));
-        String palabraClave = mensajitos.get(0);
-        mensajito = mensajito.substring(palabraClave.length()+1, mensajito.length());
+        String simbolos = alfabeto.getSimbolos();
+        List<String> palabras = new ArrayList<>(Arrays.asList(mensaje.split(" ")));
         
-        //System.out.print("palabraClave ");
-        //System.out.println(palabraClave);
-        
-        //System.out.print("mensajito ");
-        //System.out.println(mensajito);
-        
-        int banderaPalabra = 0; //bandera de n estados que permite ver en cuál letra se ubica dentro de la palabra clave
-        
-        List<String> listaPalabra = new ArrayList<>();  // lista que guarda cada caracter de la palabra clave
-        for(int e =0; e<palabraClave.length(); e++){
-            listaPalabra.add(palabraClave.substring(e, e+1));
+        for (String palabra : palabras){
+            for (int i=0; i<palabra.length(); i++){
+                for (int j=0; j<Palabra_Clave.length(); j++){
+                    int pos = (simbolos.indexOf(palabra.charAt(i))+1) - (simbolos.indexOf(Palabra_Clave.charAt(j))+1);
+                    if (pos <= 0){
+                        pos += simbolos.length();
+                    }
+                    result += getCharAt(pos, simbolos);
+                    i++;
+                    if (i >= palabra.length()){
+                        j = Palabra_Clave.length();
+                    }
+                } i--;
+            } result += " "; 
         }
-        
-        for(int e=0; e<mensajito.length(); e++){
-            //agarro el caracter
-            String caracter = mensajito.substring(e, e+1);
-            
-            if (" ".equals(caracter)){
-                result = result + " ";
-                banderaPalabra=0;
-            }
-            else{
-                int numeroNuevaLetra = (obtenerNumeroLetra(caracter)-obtenerNumeroLetra(palabraClave.substring(banderaPalabra,banderaPalabra+1)))+26;
-                numeroNuevaLetra=numeroNuevaLetra%26;
-                banderaPalabra=(banderaPalabra+1)%palabraClave.length();
-                result = result + textoLetra(numeroNuevaLetra);
-            }
-        }
-        
-        JOptionPane.showMessageDialog(null, result);
         return result;
     }
     

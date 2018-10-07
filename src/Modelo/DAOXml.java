@@ -8,7 +8,6 @@ package Modelo;
 import Controlador.DTOAlgoritmos;
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -23,6 +22,7 @@ import javax.xml.transform.TransformerException;
 import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
+import libcomp.DTO_Comunicacion;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
@@ -36,7 +36,7 @@ public class DAOXml implements IPersistencia {
 
     // falta implementar 
     @Override
-    public boolean guardar(DTOAlgoritmos dto_algoritmos) {
+    public boolean guardar(DTO_Comunicacion dto_algoritmos) {
         //escritura
         try {
             File f = new File("Bitacora/DAOXml.xml");
@@ -59,15 +59,14 @@ public class DAOXml implements IPersistencia {
                 Element entrada = doc.createElement("Entrada");
                 entrada.appendChild(doc.createTextNode(dto_algoritmos.getEntrada()));
                 body.appendChild(entrada);
-                Element algoritmo = doc.createElement("Algoritmo");
-                algoritmo.appendChild(doc.createTextNode("El algoritmo"));
-                body.appendChild(algoritmo);
+                Element algoritmo = doc.createElement("Algoritmos");
+                for (int i = 0; i < dto_algoritmos.getTipos_algoritmos().size(); i++) {
+                    algoritmo.appendChild(doc.createTextNode(dto_algoritmos.getTipos_algoritmos().get(i)+ ": " + dto_algoritmos.getSalida().get(i)));
+                    body.appendChild(algoritmo);
+                }
                 Element codifica = doc.createElement("Codifica");
                 codifica.appendChild(doc.createTextNode(String.valueOf(dto_algoritmos.isCodificacion())));
                 body.appendChild(codifica);
-                Element salida = doc.createElement("Salida");
-                salida.appendChild(doc.createTextNode(dto_algoritmos.getSalida()));
-                body.appendChild(salida);
             }else{
                 doc = builder.newDocument();
                 Element root = doc.createElement("BitacoraXML");

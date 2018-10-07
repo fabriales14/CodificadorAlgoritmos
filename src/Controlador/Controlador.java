@@ -12,6 +12,9 @@ import Modelo.AlgPalabraClave;
 import Modelo.StrategyAlgoritmo;
 import Modelo.AlgTransposicion;
 import Modelo.AlgVigenere;
+import Modelo.DAOPdf;
+import Modelo.DAOTxt;
+import Modelo.DAOXml;
 import java.io.File;
 import java.util.ArrayList;
 import libcomp.Alfabeto;
@@ -31,20 +34,20 @@ public class Controlador implements IValidable {
     public ArrayList cargarAlfabetos() {
         return bdAlfabetos.getAlfabetos();
     }
-    
-    public boolean agregarAlfabeto(Alfabeto a){
+
+    public boolean agregarAlfabeto(Alfabeto a) {
         return bdAlfabetos.agregar(a);
     }
-    
-    public boolean modificarAlfabeto(int id, Alfabeto a){
+
+    public boolean modificarAlfabeto(int id, Alfabeto a) {
         return bdAlfabetos.modificar(id, a);
     }
-    
+
     public boolean eliminarAlfabeto(int id) {
         return bdAlfabetos.eliminar(id);
     }
-    
-    public Alfabeto consultarAlfabeto(String nombre){
+
+    public Alfabeto consultarAlfabeto(String nombre) {
         return bdAlfabetos.consultar(nombre);
     }
 
@@ -60,11 +63,11 @@ public class Controlador implements IValidable {
         ArrayList<String> archivos = new ArrayList<>();
         File folder = new File("src/Modelo");
         File[] listOfFiles = folder.listFiles();
-        for (File file: listOfFiles){
+        for (File file : listOfFiles) {
             String nombre = file.getName();
-            if ("Alg".equals(nombre.substring(0, 3))){
+            if ("Alg".equals(nombre.substring(0, 3))) {
                 nombre = nombre.substring(3);
-                nombre = nombre.substring(0, nombre.length()-5);
+                nombre = nombre.substring(0, nombre.length() - 5);
                 archivos.add(nombre);
             }
         }
@@ -128,33 +131,39 @@ public class Controlador implements IValidable {
         dto_algoritmos.setSalida("salida");*/
         return dto_algoritmos;
     }
-    
-    public DTO_Comunicacion procesarPeticion(DTO_Comunicacion datos){
+
+    public DTO_Comunicacion procesarPeticion(DTO_Comunicacion datos) {
         predefinirAlfabeto(datos);
-        for (String algoritmo : datos.getTipos_algoritmos()){
+        for (String algoritmo : datos.getTipos_algoritmos()) {
             this.algoritmo = getAlgoritmo(algoritmo);
+            if (this.algoritmo instanceof AlgVigenere) {
+                ((AlgVigenere) this.algoritmo).setNumero_Vigenere(datos.getAlg_vigenere());
+            }
+            if (this.algoritmo instanceof AlgPalabraClave) {
+                ((AlgPalabraClave) this.algoritmo).setPalabra_Clave(datos.getPalabra_clave());
+            }
             String salida = this.algoritmo.procesar(datos.getEntrada(), this.alfabetoActual, datos.isCodificacion());
             datos.getSalida().add(salida);
         }
+        guardar(datos);
         return datos;
     }
 
     private void predefinirAlfabeto(DTO_Comunicacion datos) {
         this.alfabetoActual = consultarAlfabeto(datos.getAlfabetos().get(0).getNombre());
     }
-    
-    public static StrategyAlgoritmo getAlgoritmo(String nombreAlgoritmo){
+
+    public static StrategyAlgoritmo getAlgoritmo(String nombreAlgoritmo) {
         StrategyAlgoritmo algoritmo = null;
         try {
             //recupera el paquete donde se encuentra la clase base
             String paquete = StrategyAlgoritmo.class.getPackage().getName();
-            
-            String laInstancia = paquete+".Alg"+nombreAlgoritmo;
-             
+
+            String laInstancia = paquete + ".Alg" + nombreAlgoritmo;
+
             algoritmo = (StrategyAlgoritmo) Class.forName(laInstancia).newInstance();
-        } 
-        catch (ClassNotFoundException | InstantiationException | IllegalAccessException ex) {
-           algoritmo = null;
+        } catch (ClassNotFoundException | InstantiationException | IllegalAccessException ex) {
+            algoritmo = null;
         }
         return algoritmo;
     }
@@ -164,11 +173,24 @@ public class Controlador implements IValidable {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
-    private void activarAlgoritmos(DTOAlgoritmos dto_algoritmos) {
-
-    }
-
-    private void guardar(DTOAlgoritmos dto_algoritmos) {
-
+    private void guardar(DTO_Comunicacion dto_algoritmos) {
+        for (int salida : dto_algoritmos.getTipos_salida()) {
+            switch (salida) {
+                case 0:
+                    DAOTxt txt = new DAOTxt();
+                    txt.guardar(dto_algoritmos);
+                    break;
+                case 1:
+                    DAOPdf pdf = new DAOPdf();
+                    pdf.guardar(dto_algoritmos);
+                    break;
+                case 2:
+                    DAOXml xml = new DAOXml();
+                    xml.guardar(dto_algoritmos);
+                    break;
+                default:
+                    break;
+            }
+        }
     }
 }

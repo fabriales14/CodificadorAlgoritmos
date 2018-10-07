@@ -6,7 +6,6 @@ package Modelo;
  * and open the template in the editor.
  */
 //package Modelo;
-
 import javax.swing.JOptionPane;
 import libcomp.Alfabeto;
 
@@ -14,158 +13,99 @@ import libcomp.Alfabeto;
  *
  * @author Meli
  */
-public class AlgVigenere extends StrategyAlgoritmo{
-    int numero_Vigenere=0;
+public class AlgVigenere extends StrategyAlgoritmo {
+
+    int numero_Vigenere = 0;
 
     public void setNumero_Vigenere(int numero_Vigenere) {
         this.numero_Vigenere = numero_Vigenere;
     }
-    
-    
+
     public String codificar(String mensaje, Alfabeto alfabeto) {
-        String cifras = mensaje.substring(0, 2);
-        String cifra1 = cifras.substring(0,1);
-        String cifra2 = cifras.substring(1,2);
-        int isCifra = 0;
-        String mensajito = mensaje.substring(3, mensaje.length());
+        String simbolos = alfabeto.getSimbolos();
         String result = "";
-       
-        
-        
-        //char[] pruebita = Character.toChars(66);//SUCCESS
-                
-        
-        while(!mensajito.isEmpty()){
-            
-            //tomamos la letra de la cabeza
-            char letra = mensajito.charAt(0);
-            
-            //numero del char
-            int num = (int)letra;
-            //transformamos la letra, hay que validar si es may o min
-            if(Character.isLowerCase(letra)){//si es min
-                //ahora sumamos
-                if(isCifra%2==0){
-                    num = num + Integer.valueOf(cifra1);
-                    if(num>122){ //si la letra es mayor de 90
-                        num = num - 26;
+
+        for (int i = 0; i < mensaje.length(); i++) {
+            char letra = mensaje.charAt(i);
+            if (letra == ' ') {
+                result += " ";
+            } else {
+                if (i % 2 == 0) {
+                    int despTotal = simbolos.indexOf(letra);
+                    int desp1 = Integer.parseInt(Integer.toString(numero_Vigenere).substring(0, 1));
+                    while (desp1 > 0){
+                        despTotal++;
+                        if (despTotal == simbolos.length()){
+                            despTotal = 0;
+                        }
+                        desp1--;
                     }
-                }
-                else{
-                    num = num + Integer.valueOf(cifra2);
-                    if(num>122){ //si la letra es mayor de 90
-                        num = num - 26;
+                    char nuevaLetra = simbolos.charAt(despTotal);
+                    result += nuevaLetra;
+                } else {
+                    int despTotal = simbolos.indexOf(letra);
+                    int desp2 = Integer.parseInt(Integer.toString(numero_Vigenere).substring(1, 2));
+                    while (desp2 > 0){
+                        despTotal++;
+                        if (despTotal == simbolos.length()){
+                            despTotal = 0;
+                        }
+                        desp2--;
                     }
+                    char nuevaLetra = simbolos.charAt(despTotal);
+                    result += nuevaLetra;
                 }
-                char[] tmp = Character.toChars(num);
-                letra = tmp[0];
-                
             }
-            else if (Character.isUpperCase(letra)){ //si es may
-                //ahora sumamos
-                if(isCifra%2==0){
-                    num = num + Integer.valueOf(cifra1);
-                    if(num>90){ //si la letra es mayor de 90
-                        num = num - 26;
-                    }
-                }
-                else{
-                    num = num + Integer.valueOf(cifra2);
-                    if(num>90){ //si la letra es mayor de 90
-                        num = num - 26;
-                    }
-                }
-                char[] tmp = Character.toChars(num);               
-                letra = tmp[0];
-            }
-            else if (letra==' '){
-                letra = ' ';
-            }
-            isCifra++; 
-            //concatenamos la letra
-            result= result + letra;
-                
-            mensajito= mensajito.substring(1, mensajito.length());
         }
-        
-        //System.out.println(result);
-        JOptionPane.showMessageDialog(null, result);
         return result;
 
     }
 
     public String decodificar(String mensaje, Alfabeto alfabeto) {
-        String cifras = mensaje.substring(0, 2);
-        String cifra1 = cifras.substring(0,1);
-        String cifra2 = cifras.substring(1,2);
-        int isCifra = 0;
-        
-        String mensajito = mensaje.substring(3, mensaje.length());
-        String result = "";              
-        
-        while(!mensajito.isEmpty()){
-            
-            //tomamos la letra de la cabeza
-            char letra = mensajito.charAt(0);
-            //numero del char
-            int num = (int)letra;
-            //transformamos la letra, hay que validar si es may o min
-            if(Character.isLowerCase(letra)){//si es min
-                //ahora sumamos
-                if(isCifra%2==0){
-                    num = num - Integer.valueOf(cifra1);
-                    if(num<97){ //si la letra es mayor de 90
-                        num = num + 26;
+        String simbolos = alfabeto.getSimbolos();
+        String result = "";
+
+        for (int i = 0; i < mensaje.length(); i++) {
+            char letra = mensaje.charAt(i);
+            if (letra == ' ') {
+                result += " ";
+            } else {
+                if (i % 2 == 0) {
+                    int despTotal = simbolos.indexOf(letra);
+                    int desp1 = Integer.parseInt(Integer.toString(numero_Vigenere).substring(0, 1));
+                    while (desp1 > 0){
+                        despTotal--;
+                        if (despTotal < 0){
+                            despTotal = simbolos.length()-1;
+                        }
+                        desp1--;
                     }
-                }
-                else{
-                    num = num - Integer.valueOf(cifra2);
-                    if(num<97){ //si la letra es mayor de 90
-                        num = num + 26;
+                    char nuevaLetra = simbolos.charAt(despTotal);
+                    result += nuevaLetra;
+                } else {
+                    int despTotal = simbolos.indexOf(letra);
+                    int desp2 = Integer.parseInt(Integer.toString(numero_Vigenere).substring(1, 2));
+                    while (desp2 > 0){
+                        despTotal--;
+                        if (despTotal < 0){
+                            despTotal = simbolos.length()-1;
+                        }
+                        desp2--;
                     }
+                    char nuevaLetra = simbolos.charAt(despTotal);
+                    result += nuevaLetra;
                 }
-                char[] tmp = Character.toChars(num);
-                letra = tmp[0];
-                
             }
-            else if (Character.isUpperCase(letra)){ //si es may
-                //ahora sumamos
-                if(isCifra%2==0){
-                    num = num - Integer.valueOf(cifra1);
-                    if(num<65){ //si la letra es mayor de 90
-                        num = num + 26;
-                    }
-                }
-                else{
-                    num = num - Integer.valueOf(cifra2);
-                    if(num<65){ //si la letra es mayor de 90
-                        num = num + 26;
-                    }
-                }
-                char[] tmp = Character.toChars(num);               
-                letra = tmp[0];
-            }
-            else if (letra==' '){
-                letra = ' ';
-            }
-            isCifra++; 
-            //concatenamos la letra
-            result= result + letra;
-                
-            mensajito= mensajito.substring(1, mensajito.length());
         }
-        
-        //System.out.println(result);
-        JOptionPane.showMessageDialog(null, result);
         return result;
     }
-    
-    
+
     @Override
-    public String procesar(String mensaje, Alfabeto alfabeto, boolean codificar){
-        if (codificar){
-            return codificar(mensaje,alfabeto);
-        }return decodificar(mensaje, alfabeto);
+    public String procesar(String mensaje, Alfabeto alfabeto, boolean codificar) {
+        if (codificar) {
+            return codificar(mensaje, alfabeto);
+        }
+        return decodificar(mensaje, alfabeto);
     }
-    
+
 }

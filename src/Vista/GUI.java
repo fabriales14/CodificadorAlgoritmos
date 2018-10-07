@@ -14,6 +14,7 @@ import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.DefaultListModel;
+import javax.swing.JOptionPane;
 import libcomp.Alfabeto;
 import libcomp.DTO_Comunicacion;
 
@@ -313,12 +314,32 @@ public class GUI extends javax.swing.JFrame {
         for (String i : lAlgoritmos.getSelectedValuesList()) {
             algoritmos.add(i);
         }
-        ArrayList<String> salidas = new ArrayList<>();
-        for (String i : lSalidas1.getSelectedValuesList()) {
+        ArrayList<Integer> salidas = new ArrayList<>();
+        for (int i : lSalidas1.getSelectedIndices()) {
             salidas.add(i);
         }
-        DTO_Comunicacion datos = new DTO_Comunicacion(new ArrayList<Alfabeto>(), salidas , algoritmos, null);
+        DTO_Comunicacion datos = new DTO_Comunicacion(new ArrayList<Alfabeto>(), null, algoritmos, null);
+        datos.setTipos_salida(salidas);
         Alfabeto a = new Alfabeto(0, null, null, null);
+        String cod = "23";
+        if (algoritmos.indexOf("Vigenere") != -1){
+            cod = JOptionPane.showInputDialog("Digite codigo vigenere");
+            if (cod.length() != 2){
+                JOptionPane.showMessageDialog(this, "Error en el codigo Vigenere");
+                return;
+            } else {
+                datos.setAlg_vigenere(Integer.valueOf(cod));
+            }
+        }
+        if (algoritmos.indexOf("PalabraClave") != -1){
+            cod = JOptionPane.showInputDialog("Digite palabra clave");
+            if (cod.length() == 0){
+                JOptionPane.showMessageDialog(this, "No ha digitado palabra clave");
+                return;
+            } else {
+                datos.setPalabra_clave(cod);
+            }
+        }
         a.setNombre(cbAlfabeto.getSelectedItem().toString());
         datos.getAlfabetos().add(a);
         datos.setEntrada(vFraseOrigen.getText());
