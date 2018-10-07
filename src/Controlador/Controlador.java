@@ -48,6 +48,7 @@ public class Controlador implements IValidable {
     }
 
     public Alfabeto consultarAlfabeto(String nombre) {
+
         return bdAlfabetos.consultar(nombre);
     }
 
@@ -80,58 +81,6 @@ public class Controlador implements IValidable {
         return listOfFiles;
     }
 
-    public DTOAlgoritmos procesarPeticion(DTOAlgoritmos dto_algoritmos) {
-
-        /*System.out.println("Ejecutando metodo procesarPeticion de clase Controlador");
-        if (dto_algoritmos.isCodificacion()) { //pregunta si se va a codificar. en caso de false se decodificacá
-            if (dto_algoritmos.getAlgoritmos().indexOf(0) >= 0) { // tiene el algoritmo 0: Vigenere
-                AlgVigenere vigenere = new AlgVigenere();
-                vigenere.codificar(dto_algoritmos.getEntrada(), alfabetoActual);
-            }
-            if (dto_algoritmos.getAlgoritmos().indexOf(1) >= 0) { // tiene el algoritmo 1: Trasposición
-                AlgTransposicion transposicion = new AlgTransposicion();
-                transposicion.codificar(dto_algoritmos.getEntrada(), alfabetoActual);
-            }
-            if (dto_algoritmos.getAlgoritmos().indexOf(2) >= 0) { // tiene el algoritmo 2: Telefonico
-                AlgCodigoTelefonico codigoTelefonico = new AlgCodigoTelefonico();
-                codigoTelefonico.codificar(dto_algoritmos.getEntrada(), alfabetoActual);
-            }
-            if (dto_algoritmos.getAlgoritmos().indexOf(3) >= 0) { // tiene el algoritmo 3: Codigo Binario
-                AlgCodificacionBinaria codificacionBinaria = new AlgCodificacionBinaria();
-                codificacionBinaria.codificar(dto_algoritmos.getEntrada(), alfabetoActual);
-            }
-            if (dto_algoritmos.getAlgoritmos().indexOf(4) >= 0) { // tiene el algoritmo 4: Palabra Clave
-                AlgPalabraClave palabraClave = new AlgPalabraClave();
-                palabraClave.codificar(dto_algoritmos.getEntrada(), alfabetoActual);
-            }
-        } else {
-            if (dto_algoritmos.getAlgoritmos().indexOf(0) >= 0) { // tiene el algoritmo 0: Vigenere
-                AlgVigenere vigenere = new AlgVigenere();
-                vigenere.decodificar(dto_algoritmos.getEntrada(), alfabetoActual);
-            }
-            if (dto_algoritmos.getAlgoritmos().indexOf(1) >= 0) { // tiene el algoritmo 1: Trasposición
-                AlgTransposicion transposicion = new AlgTransposicion();
-                transposicion.decodificar(dto_algoritmos.getEntrada(), alfabetoActual);
-            }
-            if (dto_algoritmos.getAlgoritmos().indexOf(2) >= 0) { // tiene el algoritmo 2: Telefonico
-                AlgCodigoTelefonico codigoTelefonico = new AlgCodigoTelefonico();
-                codigoTelefonico.decodificar(dto_algoritmos.getEntrada(), alfabetoActual);
-            }
-            if (dto_algoritmos.getAlgoritmos().indexOf(3) >= 0) { // tiene el algoritmo 3: Codigo Binario
-                AlgCodificacionBinaria codificacionBinaria = new AlgCodificacionBinaria();
-                codificacionBinaria.decodificar(dto_algoritmos.getEntrada(), alfabetoActual);
-            }
-            if (dto_algoritmos.getAlgoritmos().indexOf(4) >= 0) { // tiene el algoritmo 4: Palabra Clave
-                AlgPalabraClave palabraClave = new AlgPalabraClave();
-                palabraClave.decodificar(dto_algoritmos.getEntrada(), alfabetoActual);
-            }
-
-        }
-        
-        dto_algoritmos.setSalida("salida");*/
-        return dto_algoritmos;
-    }
-
     public DTO_Comunicacion procesarPeticion(DTO_Comunicacion datos) {
         predefinirAlfabeto(datos);
         for (String algoritmo : datos.getTipos_algoritmos()) {
@@ -150,7 +99,9 @@ public class Controlador implements IValidable {
     }
 
     private void predefinirAlfabeto(DTO_Comunicacion datos) {
+
         this.alfabetoActual = consultarAlfabeto(datos.getAlfabetos().get(0).getNombre());
+        System.out.println("Alfabeto es : " + datos.getAlfabetos().get(0).getNombre());
     }
 
     public static StrategyAlgoritmo getAlgoritmo(String nombreAlgoritmo) {

@@ -73,7 +73,7 @@ public class DAOAlfabetos implements IValidable {
 
     public Alfabeto consultar(String nombre) {
         for (Alfabeto a : alfabetos) {
-            if (a.getNombre() == nombre) {
+            if (a.getNombre().trim().equals(nombre.trim())) {
                 return a;
             }
         }

@@ -7,3 +7,59 @@ Fecha: 2018/10/07 11:36:12 Entrada: codifica Algoritmos y salidas:
 CodificacionBinaria: 10 1110 11 1000 101 1000 10 0 CodigoTelefonico: 21 32 31 81 51 81 21 01 PalabraClave: wprpucdo Transposicion: acifidoc Vigenere: etfnhnefen codificacion 
 Fecha: 2018/10/07 11:49:43 Entrada: frase Algoritmos y salidas: 
 PalabraClave: zsozt en codificacion 
+Fecha: 2018/10/07 13:09:37 Entrada: hola melisa Algoritmos y salidas: 
+Transposicion: aloh asilem en codificacion 
+Fecha: 2018/10/07 13:09:50 Entrada: hola melisa Algoritmos y salidas: 
+PalabraClave: ojuu tzucts en codificacion 
+Fecha: 2018/10/07 13:09:54 Entrada: hola melisa Algoritmos y salidas: 
+CodigoTelefonico: 71 32 02 01 * 12 41 02 81 72 01 en codificacion 
+Fecha: 2018/10/07 13:10:16 Entrada: 71 32 02 01 * 12 41 02 81 72 01   Algoritmos y salidas: 
+CodigoTelefonico: hola melisaen decodificacion 
+Fecha: 2018/10/07 14:34:24 Entrada: hola Algoritmos y salidas: 
+Transposicion: aloh en codificacion 
+Fecha: 2018/10/07 14:57:08 Entrada: hola Algoritmos y salidas: 
+Transposicion: aloh en codificacion 
+Fecha: 2018/10/07 14:57:08 Entrada: hola Algoritmos y salidas: 
+Transposicion: aloh en codificacion 
+Fecha: 2018/10/07 14:58:46 Entrada: hola Algoritmos y salidas: 
+CodificacionBinaria: 111 1110 1011 0 en codificacion 
+Fecha: 2018/10/07 15:12:11 Entrada: qqowqiw Algoritmos y salidas: 
+CodificacionBinaria: 10000 10000 1110 10110 10000 1000 10110 en codificacion 
+Fecha: 2018/10/07 15:12:11 Entrada: qqowqiw Algoritmos y salidas: 
+CodificacionBinaria: 10000 10000 1110 10110 10000 1000 10110 en codificacion 
+Fecha: 2018/10/07 15:12:56 Entrada: 10000 10000 1110 10110 10000 1000 10110  Algoritmos y salidas: 
+CodificacionBinaria: qqowqiwen decodificacion 
+Fecha: 2018/10/07 15:12:56 Entrada: 10000 10000 1110 10110 10000 1000 10110  Algoritmos y salidas: 
+CodificacionBinaria: qqowqiwen decodificacion 
+Fecha: 2018/10/07 15:13:06 Entrada: hola meli Algoritmos y salidas: 
+CodificacionBinaria: 111 1110 1011 0 * 1100 100 1011 1000 en codificacion 
+Fecha: 2018/10/07 15:13:06 Entrada: hola meli Algoritmos y salidas: 
+CodificacionBinaria: 111 1110 1011 0 * 1100 100 1011 1000 en codificacion 
+Fecha: 2018/10/07 15:13:12 Entrada: hola meli Algoritmos y salidas: 
+CodigoTelefonico: 71 32 02 01 * 12 41 02 81 en codificacion 
+Fecha: 2018/10/07 15:13:12 Entrada: hola meli Algoritmos y salidas: 
+CodigoTelefonico: 71 32 02 01 * 12 41 02 81 en codificacion 
+Fecha: 2018/10/07 15:14:09 Entrada: hola meli Algoritmos y salidas: 
+PalabraClave: gdkp ltkx en codificacion 
+Fecha: 2018/10/07 15:14:09 Entrada: hola meli Algoritmos y salidas: 
+PalabraClave: gdkp ltkx en codificacion 
+Fecha: 2018/10/07 15:14:19 Entrada: gdkp ltkx  Algoritmos y salidas: 
+PalabraClave: hola meli en decodificacion 
+Fecha: 2018/10/07 15:14:19 Entrada: gdkp ltkx  Algoritmos y salidas: 
+PalabraClave: hola meli en decodificacion 
+Fecha: 2018/10/07 15:14:29 Entrada: hola meli  Algoritmos y salidas: 
+Transposicion: aloh ilem en decodificacion 
+Fecha: 2018/10/07 15:14:30 Entrada: hola meli  Algoritmos y salidas: 
+Transposicion: aloh ilem en decodificacion 
+Fecha: 2018/10/07 15:22:07 Entrada: hoasoas Algoritmos y salidas: 
+Vigenere: isbwpeten codificacion 
+Fecha: 2018/10/07 15:22:07 Entrada: hoasoas Algoritmos y salidas: 
+Vigenere: isbwpeten codificacion 
+Fecha: 2018/10/07 15:39:49 Entrada: qjiwq Algoritmos y salidas: 
+CodificacionBinaria: 10000 1001 1000 10110 10000 en codificacion 
+Fecha: 2018/10/07 15:39:49 Entrada: qjiwq Algoritmos y salidas: 
+CodificacionBinaria: 10000 1001 1000 10110 10000 en codificacion 
+Fecha: 2018/10/07 15:58:04 Entrada: nqiwiqw Algoritmos y salidas: 
+CodificacionBinaria: 1101 10000 1000 10110 1000 10000 10110 en codificacion 
+Fecha: 2018/10/07 15:58:04 Entrada: nqiwiqw Algoritmos y salidas: 
+CodificacionBinaria: 1101 10000 1000 10110 1000 10000 10110 en codificacion 
