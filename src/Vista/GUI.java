@@ -31,6 +31,7 @@ public class GUI extends javax.swing.JFrame {
     public GUI() {
         initComponents();
         //cargar alfabeto, lgoritmos y tipos de salidasd
+        setResizable(false);
         ArrayList alfabetos = controlador.cargarAlfabetos();
         for(Object alfabeto : alfabetos) {
             Alfabeto a = (Alfabeto) alfabeto;
