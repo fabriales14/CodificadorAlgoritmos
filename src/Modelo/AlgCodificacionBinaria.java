@@ -14,40 +14,44 @@ import javax.swing.JOptionPane;
  *
  * @author Bryan
  */
-public class AlgCodificacionBinaria extends StrategyAlgoritmo{
-
+public class AlgCodificacionBinaria extends StrategyAlgoritmo{  
+    
     public String codificar(String mensaje, libcomp.Alfabeto alfabeto) {
-        String mensajito = mensaje.toLowerCase();
+        String simbolos = alfabeto.getSimbolos();
         String result="";
 
-        for(int i=0 ; i<mensajito.length(); i++ ){
-            result = result + codigoBin(mensajito.substring(i, i+1));
+        for(int i=0 ; i<mensaje.length(); i++ ){
+            char letra = mensaje.charAt(i);
+            if (letra == ' '){
+                result += "* ";               
+            } else {
+                int index = simbolos.indexOf(letra);
+                result += Integer.toBinaryString(index) + " ";
+            }
         }
-        
-        //System.out.println(result);
-        JOptionPane.showMessageDialog(null, result);
         return result;
-
     }
 
     public String decodificar(String mensaje, libcomp.Alfabeto alfabeto) {
+        String simbolos = alfabeto.getSimbolos();
         String result="";
-        String mensajito = mensaje.toLowerCase();
 
-        List<String> mensajitos = new ArrayList<>(Arrays.asList(mensajito.split(" ")));
+        List<String> binarios = new ArrayList<>(Arrays.asList(mensaje.split(" ")));
 
-        for(String s: mensajitos){
-            System.out.println(s);
-            result= result + obtenerLetra(s);
+        for(String s: binarios){
+            if (!"*".equals(s)){
+                int number = Integer.parseInt(s, 2);
+                char letra = simbolos.charAt(number);
+                result += letra;
+            } else {
+                result += " ";
+            }
         }
-
-        //System.out.println(result);
-        JOptionPane.showMessageDialog(null, result);
         return result;
     }
     
     
-    public String codigoBin(String entrada){ //la entrada puede ser una letra o un código
+    /*public String codigoBin(String entrada){ //la entrada puede ser una letra o un código
         String result="";
         List<String> listaLetras= Arrays.asList("a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q","r","s","t","u","v","w","x","y","z"," ");        
         List<String> listaCode = Arrays.asList("00000 ", "00001 ", "00010 ", "00011 ", "00100 ", "00101 ", "00110 ", "00111 ", "01000 ", "01001 ", "01010 ", "01011 ", "01100 ", "01101 ",
@@ -82,7 +86,7 @@ public class AlgCodificacionBinaria extends StrategyAlgoritmo{
             result = listaCode.get(indice);
         }
         return result;
-    }
+    }*/
 
     @Override
     public String procesar(String mensaje, libcomp.Alfabeto alfabeto, boolean codificar){

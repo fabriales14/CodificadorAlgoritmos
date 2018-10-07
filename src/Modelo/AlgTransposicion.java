@@ -23,7 +23,6 @@ public class AlgTransposicion extends StrategyAlgoritmo{
         }
         
         //System.out.println(result);
-        JOptionPane.showMessageDialog(null, result);
         return result;
     }
     
@@ -43,9 +42,6 @@ public class AlgTransposicion extends StrategyAlgoritmo{
             String palabraVuelta = new StringBuilder(m).reverse().toString();
             result = result + palabraVuelta + " ";
         }
-        
-        //System.out.println(result);
-        JOptionPane.showMessageDialog(null, result);
         return result;
     }
 

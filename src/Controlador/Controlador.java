@@ -134,7 +134,7 @@ public class Controlador implements IValidable {
         for (String algoritmo : datos.getTipos_algoritmos()){
             this.algoritmo = getAlgoritmo(algoritmo);
             String salida = this.algoritmo.procesar(datos.getEntrada(), this.alfabetoActual, datos.isCodificacion());
-            System.out.println(salida);
+            datos.getSalida().add(salida);
         }
         return datos;
     }

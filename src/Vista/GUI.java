@@ -286,9 +286,14 @@ public class GUI extends javax.swing.JFrame {
         System.out.println("Se crea el DTO con los datos necesarios");
 
         //El controlador procesa la petición.
-        controlador.procesarPeticion(datos);
+        datos.setSalida(new ArrayList<>());
+        datos = controlador.procesarPeticion(datos);
+        String salida = "";
+        for (String result : datos.getSalida()){
+            salida += result + "\n";
+        }
+        taResultados.setText(salida);
 
-        taResultados.setText("Se procesan las salidas");
     }//GEN-LAST:event_AceptarButtonActionPerformed
 
     private void modoCodificacionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_modoCodificacionActionPerformed
