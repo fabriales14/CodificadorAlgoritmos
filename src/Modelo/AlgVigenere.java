@@ -15,17 +15,21 @@ import libcomp.Alfabeto;
  * @author Meli
  */
 public class AlgVigenere extends StrategyAlgoritmo{
+    int numero_Vigenere=0;
 
+    public void setNumero_Vigenere(int numero_Vigenere) {
+        this.numero_Vigenere = numero_Vigenere;
+    }
+    
+    
     public String codificar(String mensaje, Alfabeto alfabeto) {
-                String cifras = mensaje.substring(0, 2);
-        
-        
+        String cifras = mensaje.substring(0, 2);
         String cifra1 = cifras.substring(0,1);
         String cifra2 = cifras.substring(1,2);
         int isCifra = 0;
-        
         String mensajito = mensaje.substring(3, mensaje.length());
         String result = "";
+       
         
         
         //char[] pruebita = Character.toChars(66);//SUCCESS

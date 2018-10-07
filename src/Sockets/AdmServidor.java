@@ -25,7 +25,10 @@ public class AdmServidor {
         int selectedMezcla = dto.getSelectedMezcla();
         ArrayList<Integer> algoritmos = dto.getAlgoritmos();
         ArrayList<Integer> tipos_salidas = dto.getTipos_salida();
-        DTOAlgoritmos DTOAlgoritmos = new DTOAlgoritmos(alfabetos, entrada, algoritmos, tipos_salidas, codificacion, extension, selectedAlfabeto, selectedMezcla);
+        int vigenere = dto.getAlg_vigenere();
+        String palabra_clave = dto.getPalabra_clave();
+        DTOAlgoritmos DTOAlgoritmos = new DTOAlgoritmos(alfabetos, entrada, algoritmos, tipos_salidas, codificacion, 
+                extension, selectedAlfabeto, selectedMezcla,vigenere,palabra_clave);
         DTOAlgoritmos = controlador.procesarPeticion(DTOAlgoritmos);
         //cambiar esta parte.
         ArrayList<String> salidas = new ArrayList();
@@ -40,7 +43,6 @@ public class AdmServidor {
         ArrayList<Alfabeto> alfabeto = controlador.cargarAlfabetos();
         ArrayList<String> salidas = controlador.cargarSalidas();
         ArrayList<String> algoritmos = controlador.cargarAlgoritmos();
-        
         DTO_Comunicacion dto = new DTO_Comunicacion(alfabeto, salidas, algoritmos, null);
         return dto;
     }

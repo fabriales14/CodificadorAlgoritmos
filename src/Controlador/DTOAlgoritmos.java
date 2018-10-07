@@ -24,9 +24,12 @@ public class DTOAlgoritmos {
     int selectedMezcla;
     ArrayList<String> tipos_algoritmos;
     ArrayList<String> tipos_salidas;
+    int vigenere;
+    String palabra_clave;
     
     public DTOAlgoritmos(ArrayList<Alfabeto> alfabetos, String entrada, ArrayList<Integer> algoritmos,
-            ArrayList<Integer> tipos_salida, boolean codificacion, int extension, int selectedAlfabeto,int selectedMezcla) {
+            ArrayList<Integer> tipos_salida, boolean codificacion, int extension, int selectedAlfabeto,int selectedMezcla,
+            int vigenere, String palabra_clave) {
         // Datos cliente -servidor
         this.alfabetos = alfabetos;
         this.entrada = entrada;
@@ -36,6 +39,8 @@ public class DTOAlgoritmos {
         this.extension = extension;
         this.selectedAlfabeto = selectedAlfabeto;
         this.selectedMezcla = selectedMezcla;
+        this.vigenere = vigenere;
+        this.palabra_clave = palabra_clave;
     }
     public DTOAlgoritmos(ArrayList<Alfabeto> alfabetos, ArrayList<String> tipos_salidas,ArrayList<String> tipos_algoritmos, String salida){
         //Datos servidor - cliente

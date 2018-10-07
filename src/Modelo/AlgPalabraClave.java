@@ -16,13 +16,19 @@ import javax.swing.JOptionPane;
  * @author Bryan
  */
 public class AlgPalabraClave extends StrategyAlgoritmo{
+    String Palabra_Clave = "";
 
+    public void setPalabra_Clave(String Palabra_Clave) {
+        this.Palabra_Clave = Palabra_Clave;
+    }
+    
     public String codificar(String mensaje, libcomp.Alfabeto alfabeto) {
         String result = "";
         String mensajito = mensaje.toLowerCase();
         List<String> mensajitos = new ArrayList<>(Arrays.asList(mensajito.split(" ")));
         String palabraClave = mensajitos.get(0);
         mensajito = mensajito.substring(palabraClave.length()+1, mensajito.length());
+        
         
         //System.out.print("palabraClave ");
         //System.out.println(palabraClave);
