@@ -5,7 +5,7 @@
  */
 package Controlador;
 
-import Modelo.Alfabeto;
+import libcomp.Alfabeto;
 import java.util.Random;
 
 /**

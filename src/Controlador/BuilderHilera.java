@@ -5,8 +5,7 @@
  */
 package Controlador;
 
-import Modelo.Alfabeto;
-
+import libcomp.Alfabeto;
 /**
  *
  * @author Meli

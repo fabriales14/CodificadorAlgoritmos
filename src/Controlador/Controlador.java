@@ -30,7 +30,8 @@ public class Controlador implements IValidable {
     private IPersistencia DTO;
     private StrategyAlgoritmo algoritmo;
     private DAOAlfabetos bdAlfabetos = new DAOAlfabetos();
-
+    private DirectorHilera director;
+    
     public ArrayList cargarAlfabetos() {
         return bdAlfabetos.getAlfabetos();
     }
@@ -50,6 +51,28 @@ public class Controlador implements IValidable {
     public Alfabeto consultarAlfabeto(String nombre) {
 
         return bdAlfabetos.consultar(nombre);
+    }
+    
+    public void cambiarDirector(DTO_Comunicacion dto){
+        predefinirAlfabeto(dto);
+        BuilderHilera builder = null;
+        switch(dto.getSelectedMezcla()){
+            case 1:                     
+                builder = new noConNoDup(alfabetoActual);
+                break;
+            case 2:
+                builder = new conNoDup(alfabetoActual);
+                break;
+            case 3:
+                builder = new conDup(alfabetoActual);
+            }    
+        
+        director = new DirectorHilera(builder);
+    }
+    
+    public String construirHilera(DTO_Comunicacion dto){
+        director.BuildHilera(dto.getExtension());
+        return director.getHilera();
     }
 
     public ArrayList cargarSalidas() {
@@ -101,7 +124,6 @@ public class Controlador implements IValidable {
     private void predefinirAlfabeto(DTO_Comunicacion datos) {
 
         this.alfabetoActual = consultarAlfabeto(datos.getAlfabetos().get(0).getNombre());
-        System.out.println("Alfabeto es : " + datos.getAlfabetos().get(0).getNombre());
     }
 
     public static StrategyAlgoritmo getAlgoritmo(String nombreAlgoritmo) {

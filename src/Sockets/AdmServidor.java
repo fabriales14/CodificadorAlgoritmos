@@ -16,33 +16,14 @@ import Controlador.*;
 public class AdmServidor {
     private Controlador controlador;
     public DTO_Comunicacion recibir(DTO_Comunicacion dto)
-    {
-        /*
-        int selectedAlfabeto = dto.getSelectedAlfabeto();
-        String entrada = dto.getEntrada();
-        boolean codificacion = dto.isCodificacion();
-        int extension = dto.getExtension();
-        ArrayList<Alfabeto> alfabetos= null; // quitar
-        int selectedMezcla = dto.getSelectedMezcla();
-        ArrayList<Integer> algoritmos = dto.getAlgoritmos();
-        ArrayList<Integer> tipos_salidas = dto.getTipos_salida();
-        int vigenere = dto.getAlg_vigenere();
-        String palabra_clave = dto.getPalabra_clave();
-        DTOAlgoritmos DTOAlgoritmos = new DTOAlgoritmos(alfabetos, entrada, algoritmos, tipos_salidas, codificacion, 
-                extension, selectedAlfabeto, selectedMezcla,vigenere,palabra_clave);*/
-        
-        
-        dto = controlador.procesarPeticion(dto);
-        //cambiar esta parte.
-        /*
-        ArrayList<String> salidas = new ArrayList();
-        salidas.add(DTOAlgoritmos.getSalida());
-        
-        System.out.println(salidas);
-        
-        dto.setSalida(salidas);*/
-        System.out.println("adm servidor");
-        System.out.println(dto.getSalida().get(0));// cambiar
+    {      
+        if(dto.getSelectedMezcla() == 0)
+            dto = controlador.procesarPeticion(dto);
+        else{            
+            controlador.cambiarDirector(dto);
+            dto.getSalida().add(controlador.construirHilera(dto));
+        }          
+
         return dto;
     }
     
