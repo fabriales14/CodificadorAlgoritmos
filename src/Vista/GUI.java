@@ -6,7 +6,6 @@
 package Vista;
 
 import Controlador.Controlador;
-import Controlador.DTOAlgoritmos;
 import java.awt.Desktop;
 import java.io.File;
 import java.io.IOException;
@@ -32,6 +31,7 @@ public class GUI extends javax.swing.JFrame {
     public GUI() {
         initComponents();
         //cargar alfabeto, lgoritmos y tipos de salidasd
+        setResizable(false);
         ArrayList alfabetos = controlador.cargarAlfabetos();
         for(Object alfabeto : alfabetos) {
             Alfabeto a = (Alfabeto) alfabeto;

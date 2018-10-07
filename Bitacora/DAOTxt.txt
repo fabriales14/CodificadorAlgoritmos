@@ -5,3 +5,5 @@ Fecha: 2018/10/07 11:33:20 Entrada: la frase Algoritmos y salidas:
 CodificacionBinaria: 1011 0 * 101 10001 0 10010 100 CodigoTelefonico: 02 01 * 51 62 01 72 41 Transposicion: al esarf en codificacion 
 Fecha: 2018/10/07 11:36:12 Entrada: codifica Algoritmos y salidas: 
 CodificacionBinaria: 10 1110 11 1000 101 1000 10 0 CodigoTelefonico: 21 32 31 81 51 81 21 01 PalabraClave: wprpucdo Transposicion: acifidoc Vigenere: etfnhnefen codificacion 
+Fecha: 2018/10/07 11:49:43 Entrada: frase Algoritmos y salidas: 
+PalabraClave: zsozt en codificacion 
