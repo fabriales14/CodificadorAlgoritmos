@@ -80,7 +80,6 @@ public class Servidor {
     }
 
 private void procesePeticion(OBJ_Comp objeto) throws IOException, ClassNotFoundException {
-    System.out.println(objeto.getDatoEntrada().getEntrada());
     // detectar lo que le enviaron...
     if (objeto.getAccion() == TipoAccion.Enviar_Datos){
         System.out.println("Atendiendo peticion...");

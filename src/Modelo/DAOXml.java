@@ -83,8 +83,7 @@ public class DAOXml implements IPersistencia {
             // StreamResult result = new StreamResult(System.out);
             transformer.transform(source, result);
 
-            System.out.println("File saved!");
-        } catch (ParserConfigurationException | TransformerException | SAXException | IOException ex) {
+         } catch (ParserConfigurationException | TransformerException | SAXException | IOException ex) {
             Logger.getLogger(DAOXml.class.getName()).log(Level.SEVERE, null, ex);
         }
         return true;

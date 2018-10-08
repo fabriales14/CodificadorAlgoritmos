@@ -47,10 +47,8 @@ public class AlgCodigoTelefonico extends StrategyAlgoritmo {
             } else {
                 result += " ";
             }
-            //result = result + obtenerLetra(s);
         }
 
-        System.out.println(result);
         return result;
     }
 
@@ -67,7 +65,6 @@ public class AlgCodigoTelefonico extends StrategyAlgoritmo {
             for (int j = 0; j <= 9; j++) {
                 String key = String.valueOf(j);
                 key += String.valueOf(cont);
-                //System.out.println(key);
                 digitos.put(key, String.valueOf(simbolos.charAt(i)));
                 i++;
                 if (i >= tam) {
@@ -94,11 +91,10 @@ public class AlgCodigoTelefonico extends StrategyAlgoritmo {
                 "81 ", "82 ", "83 ", "91 ", "92 ", "93 ", "94 ", " * ");
         if (listaCode.contains(entrada)) {//si la lista tiene la letra
             int indice = listaCode.indexOf(entrada);
-            System.out.println(indice);
+           
             result = listaLetras.get(indice);
         } else if (listaLetras.contains(entrada)) {//si la lista tiene la letra
             int indice = listaLetras.indexOf(entrada);
-            System.out.println(indice);
             result = listaCode.get(indice);
         }
         return result;
@@ -111,11 +107,9 @@ public class AlgCodigoTelefonico extends StrategyAlgoritmo {
                 "81", "82", "83", "91", "92", "93", "94", "*");
         if (listaCode.contains(entrada)) {//si la lista tiene la letra
             int indice = listaCode.indexOf(entrada);
-            System.out.println(indice);
             result = listaLetras.get(indice);
         } else if (listaLetras.contains(entrada)) {//si la lista tiene la letra
             int indice = listaLetras.indexOf(entrada);
-            System.out.println(indice);
             result = listaCode.get(indice);
         }
         return result;

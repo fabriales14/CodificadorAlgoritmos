@@ -13,10 +13,10 @@ import libcomp.Alfabeto;
  * @author Meli
  */
 public class DTOAlgoritmos {
-   int selectedAlfabeto;
+   
+    int selectedAlfabeto;
     String entrada;
-    String salida;
-    ArrayList<Integer> algoritmos; // {}
+    ArrayList<String> salida;
     ArrayList<Integer> tipos_salida; // {}
     boolean codificacion;
     int extension;
@@ -24,31 +24,52 @@ public class DTOAlgoritmos {
     int selectedMezcla;
     ArrayList<String> tipos_algoritmos;
     ArrayList<String> tipos_salidas;
-    int vigenere;
+    int alg_vigenere;
     String palabra_clave;
+    boolean generar;
     
-    public DTOAlgoritmos(ArrayList<Alfabeto> alfabetos, String entrada, ArrayList<Integer> algoritmos,
+    public  DTOAlgoritmos(ArrayList<Alfabeto> alfabetos, String entrada, ArrayList<String> tipos_algoritmos,
             ArrayList<Integer> tipos_salida, boolean codificacion, int extension, int selectedAlfabeto,int selectedMezcla,
-            int vigenere, String palabra_clave) {
+            int alg_vigenere, String palabra_clave) {
         // Datos cliente -servidor
         this.alfabetos = alfabetos;
         this.entrada = entrada;
-        this.algoritmos = algoritmos;
+        this.tipos_algoritmos = tipos_algoritmos;
         this.tipos_salida = tipos_salida;
         this.codificacion = codificacion;
         this.extension = extension;
         this.selectedAlfabeto = selectedAlfabeto;
         this.selectedMezcla = selectedMezcla;
-        this.vigenere = vigenere;
+        this.alg_vigenere = alg_vigenere;
         this.palabra_clave = palabra_clave;
+        this.salida = new ArrayList<>();
     }
-    public DTOAlgoritmos(ArrayList<Alfabeto> alfabetos, ArrayList<String> tipos_salidas,ArrayList<String> tipos_algoritmos, String salida){
+    public DTOAlgoritmos(ArrayList<Alfabeto> alfabetos, ArrayList<String> tipos_salidas,ArrayList<String> tipos_algoritmos,
+            ArrayList<String> salida){
         //Datos servidor - cliente
         this.alfabetos = alfabetos;
         this.tipos_algoritmos = tipos_algoritmos;
         this.tipos_salidas = tipos_salidas;
         this.salida = salida;
     }
+    
+    public DTOAlgoritmos(int selectedMezcla, int extension, Alfabeto alfabeto){
+        this.selectedMezcla = selectedMezcla;
+        this.alfabetos = new ArrayList<>();
+        this.alfabetos.add(alfabeto);
+        this.salida = new ArrayList<>();
+        this.extension = extension;
+    }
+
+    public void setGenerar(boolean generar) {
+        this.generar = generar;
+    }
+
+    public boolean isGenerar() {
+        return generar;
+    }
+    
+    
     public String getEntrada() {
         return entrada;
     }
@@ -57,20 +78,12 @@ public class DTOAlgoritmos {
         this.entrada = entrada;
     }
 
-    public  String getSalida() {
+    public ArrayList<String> getSalida() {
         return salida;
     }
 
-    public void setSalida(String salida) {
+    public void setSalida(ArrayList<String> salida) {
         this.salida = salida;
-    }
-
-    public ArrayList<Integer> getAlgoritmos() {
-        return algoritmos;
-    }
-
-    public void setAlgoritmos(ArrayList<Integer> algoritmos) {
-        this.algoritmos = algoritmos;
     }
 
     public ArrayList<Integer> getTipos_salida() {
@@ -136,5 +149,20 @@ public class DTOAlgoritmos {
     public void setTipos_salidas(ArrayList<String> tipos_salidas) {
         this.tipos_salidas = tipos_salidas;
     }
-    
+
+    public int getAlg_vigenere() {
+        return alg_vigenere;
+    }
+
+    public void setAlg_vigenere(int alg_vigenere) {
+        this.alg_vigenere = alg_vigenere;
+    }
+
+    public String getPalabra_clave() {
+        return palabra_clave;
+    }
+
+    public void setPalabra_clave(String palabra_clave) {
+        this.palabra_clave = palabra_clave;
+    }
 }

@@ -20,10 +20,8 @@ public class CodificadorAlgoritmos {
      * @param args the command line arguments
      */
     public static void main(String[] args) throws ClassNotFoundException {
-      // GUI gui = new GUI(); 
-      // gui.setVisible (true); 
-       // Consola consola = new Consola();
-       // consola.consola();
+       GUI gui = new GUI(); 
+       gui.setVisible (true);
         Servidor  miServidor = new Servidor();
         miServidor.inicialiceServidor();
     }

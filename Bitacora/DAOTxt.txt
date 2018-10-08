@@ -361,3 +361,23 @@ Fecha: 2018/10/07 22:17:47 Entrada: 11 110 1111 10001 Algoritmos y salidas:
 CodificacionBinaria: dgpren decodificacion 
 Fecha: 2018/10/07 22:17:47 Entrada: 11 110 1111 10001 Algoritmos y salidas: 
 CodificacionBinaria: dgpren decodificacion 
+Fecha: 2018/10/07 22:31:59 Entrada: MELI Algoritmos y salidas: 
+CodificacionBinaria: 0 1 10 11 en codificacion 
+Fecha: 2018/10/07 22:31:59 Entrada: MELI Algoritmos y salidas: 
+CodificacionBinaria: 0 1 10 11 en codificacion 
+Fecha: 2018/10/07 22:32:10 Entrada: MELI Algoritmos y salidas: 
+CodigoTelefonico: 01 11 21 31 en codificacion 
+Fecha: 2018/10/07 22:32:10 Entrada: MELI Algoritmos y salidas: 
+CodigoTelefonico: 01 11 21 31 en codificacion 
+Fecha: 2018/10/07 22:32:29 Entrada: fbp Algoritmos y salidas: 
+CodificacionBinaria: 101 1 1011 en codificacion 
+Fecha: 2018/10/07 22:32:29 Entrada: fbp Algoritmos y salidas: 
+CodificacionBinaria: 101 1 1011 en codificacion 
+Fecha: 2018/10/07 22:32:49 Entrada: fbp Algoritmos y salidas: 
+PalabraClave: fbp Transposicion: pbf Vigenere: ifcen codificacion 
+Fecha: 2018/10/07 22:32:49 Entrada: fbp Algoritmos y salidas: 
+PalabraClave: fbp Transposicion: pbf Vigenere: ifcen codificacion 
+Fecha: 2018/10/07 22:32:49 Entrada: fbp Algoritmos y salidas: 
+PalabraClave: fbp Transposicion: pbf Vigenere: ifcen codificacion 
+Fecha: 2018/10/07 22:32:49 Entrada: fbp Algoritmos y salidas: 
+PalabraClave: fbp Transposicion: pbf Vigenere: ifcen codificacion 

@@ -111,6 +111,7 @@ public class Controlador implements IValidable {
          if(datos.isCodificacion()==true){
             if (!validar(datos)){
                 JOptionPane.showMessageDialog(null, "Error en datos en entrada", "Error", JOptionPane.ERROR_MESSAGE);
+                datos.getSalida().add("");
                 return datos;
            }
          }

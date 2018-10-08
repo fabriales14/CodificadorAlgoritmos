@@ -22,8 +22,6 @@ public class AlgTransposicion extends StrategyAlgoritmo{
             result = result + palabraVuelta + " ";
         }
         
-        System.out.println("RESULTADO CODIFICADO");
-        System.out.println(result);
         return result;
     }
     
