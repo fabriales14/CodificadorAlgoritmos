@@ -22,7 +22,7 @@ public class AlgCodificacionBinaria extends StrategyAlgoritmo{
 
         for(int i=0 ; i<mensaje.length(); i++ ){
             char letra = mensaje.charAt(i);
-            if (letra == ' '){
+            if (alfabeto.getSimbolos_ignorados().indexOf(letra) != -1){
                 result += "* ";               
             } else {
                 int index = simbolos.indexOf(letra);

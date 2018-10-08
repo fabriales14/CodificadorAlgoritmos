@@ -23,7 +23,7 @@ public class AlgCodigoTelefonico extends StrategyAlgoritmo {
 
         for (int i = 0; i < mensaje.length(); i++) {
             char letra = mensaje.charAt(i);
-            if (letra == ' ') {
+            if (alfabeto.getSimbolos_ignorados().indexOf(letra) != -1) {
                 result += "* ";
             } else {
                 String codigo = getKeyFromValue(digitos, String.valueOf(letra));
@@ -31,7 +31,6 @@ public class AlgCodigoTelefonico extends StrategyAlgoritmo {
             }
         }
 
-        System.out.println(result);
         return result;
 
     }

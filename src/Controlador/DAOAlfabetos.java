@@ -34,6 +34,23 @@ public class DAOAlfabetos implements IValidable {
     @Override
     public boolean validar(Object obj) {
         Alfabeto a = (Alfabeto) obj;
+        for (int i = 0; i < a.getSimbolos().length(); i++){
+            char caracter = a.getSimbolos().charAt(i);
+            int count = 0;
+            for (int j = 0; j < a.getSimbolos().length(); j++){
+                if (a.getSimbolos().charAt(j) == caracter)
+                    count++;
+            }
+            if (count >= 2)
+                return false;
+        }
+        for (int i = 0; i < a.getSimbolos_ignorados().length(); i++){
+            char c = a.getSimbolos_ignorados().charAt(i);
+            for (int j = 0; j < a.getSimbolos().length(); j++){
+                if (a.getSimbolos().charAt(j) == c)
+                    return false;
+            }
+        }
         for (Alfabeto alfabeto : alfabetos) {
             if (alfabeto.getId() == a.getId() || alfabeto.getNombre().equals(a.getNombre())
                     || alfabeto.getSimbolos().equals(a.getSimbolos())) {

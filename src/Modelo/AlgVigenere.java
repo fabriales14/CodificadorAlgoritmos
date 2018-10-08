@@ -27,8 +27,8 @@ public class AlgVigenere extends StrategyAlgoritmo {
 
         for (int i = 0; i < mensaje.length(); i++) {
             char letra = mensaje.charAt(i);
-            if (letra == ' ') {
-                result += " ";
+            if (alfabeto.getSimbolos_ignorados().indexOf(letra) != -1) {
+                result += letra;
             } else {
                 if (i % 2 == 0) {
                     int despTotal = simbolos.indexOf(letra);
@@ -67,8 +67,8 @@ public class AlgVigenere extends StrategyAlgoritmo {
 
         for (int i = 0; i < mensaje.length(); i++) {
             char letra = mensaje.charAt(i);
-            if (letra == ' ') {
-                result += " ";
+            if (alfabeto.getSimbolos_ignorados().indexOf(letra) != -1) {
+                result += letra;
             } else {
                 if (i % 2 == 0) {
                     int despTotal = simbolos.indexOf(letra);

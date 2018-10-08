@@ -17,6 +17,7 @@ import Modelo.DAOTxt;
 import Modelo.DAOXml;
 import java.io.File;
 import java.util.ArrayList;
+import javax.swing.JOptionPane;
 import libcomp.Alfabeto;
 import libcomp.DTO_Comunicacion;
 
@@ -33,6 +34,7 @@ public class Controlador implements IValidable {
     private DirectorHilera director;
     
     public ArrayList cargarAlfabetos() {
+        this.alfabetoActual = (Alfabeto) bdAlfabetos.getAlfabetos().get(0);
         return bdAlfabetos.getAlfabetos();
     }
 
@@ -106,6 +108,10 @@ public class Controlador implements IValidable {
 
     public DTO_Comunicacion procesarPeticion(DTO_Comunicacion datos) {
         predefinirAlfabeto(datos);
+        if (!validar(datos)){
+            JOptionPane.showMessageDialog(null, "Error en datos en entrada", "Error", JOptionPane.ERROR_MESSAGE);
+            return datos;
+        }
         for (String algoritmo : datos.getTipos_algoritmos()) {
             this.algoritmo = getAlgoritmo(algoritmo);
             if (this.algoritmo instanceof AlgVigenere) {
@@ -122,7 +128,6 @@ public class Controlador implements IValidable {
     }
 
     private void predefinirAlfabeto(DTO_Comunicacion datos) {
-
         this.alfabetoActual = consultarAlfabeto(datos.getAlfabetos().get(0).getNombre());
     }
 
@@ -143,7 +148,21 @@ public class Controlador implements IValidable {
 
     @Override
     public boolean validar(Object obj) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        DTO_Comunicacion datos = (DTO_Comunicacion) obj;
+        if (datos.getEntrada() == null || datos.getEntrada() == " "){
+            return false;
+        }
+        for (int i=0; i<datos.getEntrada().length(); i++){
+            char letra = datos.getEntrada().charAt(i);
+            if (this.alfabetoActual.getSimbolos().indexOf(letra) == -1 
+                || this.alfabetoActual.getSimbolos_ignorados().indexOf(letra) == -1){
+                return false;
+            }
+        }
+        if (datos.getTipos_algoritmos().isEmpty() || datos.getTipos_salida().isEmpty()){
+            return false;
+        }
+        return true;
     }
 
     private void guardar(DTO_Comunicacion dto_algoritmos) {
