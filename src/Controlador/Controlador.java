@@ -108,10 +108,10 @@ public class Controlador implements IValidable {
 
     public DTO_Comunicacion procesarPeticion(DTO_Comunicacion datos) {
         predefinirAlfabeto(datos);
-        if (!validar(datos)){
-            JOptionPane.showMessageDialog(null, "Error en datos en entrada", "Error", JOptionPane.ERROR_MESSAGE);
-            return datos;
-        }
+     //   if (!validar(datos)){
+     //       JOptionPane.showMessageDialog(null, "Error en datos en entrada", "Error", JOptionPane.ERROR_MESSAGE);
+     //       return datos;
+     //   }
         for (String algoritmo : datos.getTipos_algoritmos()) {
             this.algoritmo = getAlgoritmo(algoritmo);
             if (this.algoritmo instanceof AlgVigenere) {

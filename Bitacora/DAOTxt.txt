@@ -63,3 +63,59 @@ Fecha: 2018/10/07 15:58:04 Entrada: nqiwiqw Algoritmos y salidas:
 CodificacionBinaria: 1101 10000 1000 10110 1000 10000 10110 en codificacion 
 Fecha: 2018/10/07 15:58:04 Entrada: nqiwiqw Algoritmos y salidas: 
 CodificacionBinaria: 1101 10000 1000 10110 1000 10000 10110 en codificacion 
+Fecha: 2018/10/07 20:26:06 Entrada: hoaaa Algoritmos y salidas: 
+PalabraClave: pdmbi en codificacion 
+Fecha: 2018/10/07 20:26:06 Entrada: hoaaa Algoritmos y salidas: 
+PalabraClave: pdmbi en codificacion 
+Fecha: 2018/10/07 20:28:41 Entrada: marlen Algoritmos y salidas: 
+CodificacionBinaria: 1100 0 10001 1011 100 1101 en codificacion 
+Fecha: 2018/10/07 20:28:41 Entrada: marlen Algoritmos y salidas: 
+CodificacionBinaria: 1100 0 10001 1011 100 1101 en codificacion 
+Fecha: 2018/10/07 20:28:47 Entrada: marlen Algoritmos y salidas: 
+Transposicion: nelram en codificacion 
+Fecha: 2018/10/07 20:28:47 Entrada: marlen Algoritmos y salidas: 
+Transposicion: nelram en codificacion 
+Fecha: 2018/10/07 20:28:58 Entrada: marlen Algoritmos y salidas: 
+Vigenere: qdvoiqen codificacion 
+Fecha: 2018/10/07 20:28:58 Entrada: marlen Algoritmos y salidas: 
+Vigenere: qdvoiqen codificacion 
+Fecha: 2018/10/07 20:29:06 Entrada: marlen Algoritmos y salidas: 
+PalabraClave: zbjxjb en codificacion 
+Fecha: 2018/10/07 20:29:06 Entrada: marlen Algoritmos y salidas: 
+PalabraClave: zbjxjb en codificacion 
+Fecha: 2018/10/07 21:03:29 Entrada: mgw Algoritmos y salidas: 
+CodificacionBinaria: 1100 110 10110 en codificacion 
+Fecha: 2018/10/07 21:03:29 Entrada: mgw Algoritmos y salidas: 
+CodificacionBinaria: 1100 110 10110 en codificacion 
+Fecha: 2018/10/07 21:03:36 Entrada: mgw Algoritmos y salidas: 
+CodigoTelefonico: 12 61 03 en codificacion 
+Fecha: 2018/10/07 21:03:36 Entrada: mgw Algoritmos y salidas: 
+CodigoTelefonico: 12 61 03 en codificacion 
+Fecha: 2018/10/07 21:03:45 Entrada: mgw Algoritmos y salidas: 
+PalabraClave: uvi en codificacion 
+Fecha: 2018/10/07 21:03:45 Entrada: mgw Algoritmos y salidas: 
+PalabraClave: uvi en codificacion 
+Fecha: 2018/10/07 21:03:49 Entrada: mgw Algoritmos y salidas: 
+Transposicion: wgm en codificacion 
+Fecha: 2018/10/07 21:03:49 Entrada: mgw Algoritmos y salidas: 
+Transposicion: wgm en codificacion 
+Fecha: 2018/10/07 21:06:48 Entrada: holaaaa Algoritmos y salidas: 
+Vigenere: ltpfefeen codificacion 
+Fecha: 2018/10/07 21:06:48 Entrada: holaaaa Algoritmos y salidas: 
+Vigenere: ltpfefeen codificacion 
+Fecha: 2018/10/07 21:06:54 Entrada: holaaaa Algoritmos y salidas: 
+CodificacionBinaria: 111 1110 1011 0 0 0 0 en codificacion 
+Fecha: 2018/10/07 21:06:54 Entrada: holaaaa Algoritmos y salidas: 
+CodificacionBinaria: 111 1110 1011 0 0 0 0 en codificacion 
+Fecha: 2018/10/07 21:06:57 Entrada: holaaaa Algoritmos y salidas: 
+Transposicion: aaaaloh en codificacion 
+Fecha: 2018/10/07 21:06:57 Entrada: holaaaa Algoritmos y salidas: 
+Transposicion: aaaaloh en codificacion 
+Fecha: 2018/10/07 21:07:12 Entrada: hfpi Algoritmos y salidas: 
+CodificacionBinaria: 111 101 1111 1000 en codificacion 
+Fecha: 2018/10/07 21:07:12 Entrada: hfpi Algoritmos y salidas: 
+CodificacionBinaria: 111 101 1111 1000 en codificacion 
+Fecha: 2018/10/07 21:07:27 Entrada: 111 101 1111 1000 Algoritmos y salidas: 
+CodificacionBinaria: hfpien decodificacion 
+Fecha: 2018/10/07 21:07:27 Entrada: 111 101 1111 1000 Algoritmos y salidas: 
+CodificacionBinaria: hfpien decodificacion 

@@ -17,13 +17,15 @@ public class AdmServidor {
     private Controlador controlador;
     public DTO_Comunicacion recibir(DTO_Comunicacion dto)
     {      
-        if(dto.getSelectedMezcla() == 0)
+        if(dto.isGenerar()!=true){
             dto = controlador.procesarPeticion(dto);
-        else{            
+        }
+        else{
+            dto.setGenerar(false);
             controlador.cambiarDirector(dto);
             dto.getSalida().add(controlador.construirHilera(dto));
         }          
-
+       
         return dto;
     }
     
