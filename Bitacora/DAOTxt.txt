@@ -119,3 +119,245 @@ Fecha: 2018/10/07 21:07:27 Entrada: 111 101 1111 1000 Algoritmos y salidas:
 CodificacionBinaria: hfpien decodificacion 
 Fecha: 2018/10/07 21:07:27 Entrada: 111 101 1111 1000 Algoritmos y salidas: 
 CodificacionBinaria: hfpien decodificacion 
+Fecha: 2018/10/07 21:22:12 Entrada: imzj Algoritmos y salidas: 
+CodificacionBinaria: 1000 1100 11001 1001 en codificacion 
+Fecha: 2018/10/07 21:22:12 Entrada: imzj Algoritmos y salidas: 
+CodificacionBinaria: 1000 1100 11001 1001 en codificacion 
+Fecha: 2018/10/07 21:24:21 Entrada: nwsq Algoritmos y salidas: 
+CodificacionBinaria: 1101 10110 10010 10000 en codificacion 
+Fecha: 2018/10/07 21:24:21 Entrada: nwsq Algoritmos y salidas: 
+CodificacionBinaria: 1101 10110 10010 10000 en codificacion 
+Fecha: 2018/10/07 21:28:00 Entrada: hola Algoritmos y salidas: 
+CodigoTelefonico: 71 32 02 01 en codificacion 
+Fecha: 2018/10/07 21:28:00 Entrada: hola Algoritmos y salidas: 
+CodigoTelefonico: 71 32 02 01 en codificacion 
+Fecha: 2018/10/07 21:36:59 Entrada: olaaa Algoritmos y salidas: 
+Vigenere: rpdeden codificacion 
+Fecha: 2018/10/07 21:36:59 Entrada: olaaa Algoritmos y salidas: 
+Vigenere: rpdeden codificacion 
+Fecha: 2018/10/07 21:40:49 Entrada: abc Algoritmos y salidas: 
+PalabraClave: iqo en codificacion 
+Fecha: 2018/10/07 21:40:49 Entrada: abc Algoritmos y salidas: 
+PalabraClave: iqo en codificacion 
+Fecha: 2018/10/07 21:40:57 Entrada: def Algoritmos y salidas: 
+PalabraClave: ltr en codificacion 
+Fecha: 2018/10/07 21:40:58 Entrada: def Algoritmos y salidas: 
+PalabraClave: ltr en codificacion 
+Fecha: 2018/10/07 21:40:59 Entrada: def Algoritmos y salidas: 
+PalabraClave: ltr en codificacion 
+Fecha: 2018/10/07 21:40:59 Entrada: def Algoritmos y salidas: 
+PalabraClave: ltr en codificacion 
+Fecha: 2018/10/07 21:41:04 Entrada: def Algoritmos y salidas: 
+CodigoTelefonico: 31 41 51 en codificacion 
+Fecha: 2018/10/07 21:41:04 Entrada: def Algoritmos y salidas: 
+CodigoTelefonico: 31 41 51 en codificacion 
+Fecha: 2018/10/07 21:41:13 Entrada: def Algoritmos y salidas: 
+Vigenere: eegen codificacion 
+Fecha: 2018/10/07 21:41:13 Entrada: def Algoritmos y salidas: 
+Vigenere: eegen codificacion 
+Fecha: 2018/10/07 21:41:19 Entrada: def Algoritmos y salidas: 
+Transposicion: fed en codificacion 
+Fecha: 2018/10/07 21:41:19 Entrada: def Algoritmos y salidas: 
+Transposicion: fed en codificacion 
+Fecha: 2018/10/07 21:41:42 Entrada: def Algoritmos y salidas: 
+PalabraClave: ltr en codificacion 
+Fecha: 2018/10/07 21:41:42 Entrada: def Algoritmos y salidas: 
+PalabraClave: ltr en codificacion 
+Fecha: 2018/10/07 21:41:46 Entrada: klls Algoritmos y salidas: 
+PalabraClave: saxt en codificacion 
+Fecha: 2018/10/07 21:41:46 Entrada: klls Algoritmos y salidas: 
+PalabraClave: saxt en codificacion 
+Fecha: 2018/10/07 21:41:47 Entrada: klls Algoritmos y salidas: 
+PalabraClave: saxt en codificacion 
+Fecha: 2018/10/07 21:41:47 Entrada: klls Algoritmos y salidas: 
+PalabraClave: saxt en codificacion 
+Fecha: 2018/10/07 21:41:51 Entrada: jnkmdsxokn Algoritmos y salidas: 
+PalabraClave: rcwnlhjpsc en codificacion 
+Fecha: 2018/10/07 21:41:51 Entrada: jnkmdsxokn Algoritmos y salidas: 
+PalabraClave: rcwnlhjpsc en codificacion 
+Fecha: 2018/10/07 21:41:55 Entrada: jnkmdsxokn Algoritmos y salidas: 
+CodigoTelefonico: 91 22 null 12 31 72 13 32 null 22 en codificacion 
+Fecha: 2018/10/07 21:41:55 Entrada: jnkmdsxokn Algoritmos y salidas: 
+CodigoTelefonico: 91 22 null 12 31 72 13 32 null 22 en codificacion 
+Fecha: 2018/10/07 21:42:08 Entrada: jnkmdsxokn Algoritmos y salidas: 
+CodificacionBinaria: 1001 1101 1010 1100 11 10010 10111 1110 1010 1101 en codificacion 
+Fecha: 2018/10/07 21:42:08 Entrada: jnkmdsxokn Algoritmos y salidas: 
+CodificacionBinaria: 1001 1101 1010 1100 11 10010 10111 1110 1010 1101 en codificacion 
+Fecha: 2018/10/07 21:42:11 Entrada: jnkmdsxokn Algoritmos y salidas: 
+Vigenere: knlmesyolnen codificacion 
+Fecha: 2018/10/07 21:42:11 Entrada: jnkmdsxokn Algoritmos y salidas: 
+Vigenere: knlmesyolnen codificacion 
+Fecha: 2018/10/07 21:42:14 Entrada: jnkmdsxokn Algoritmos y salidas: 
+Transposicion: nkoxsdmknj en codificacion 
+Fecha: 2018/10/07 21:42:14 Entrada: jnkmdsxokn Algoritmos y salidas: 
+Transposicion: nkoxsdmknj en codificacion 
+Fecha: 2018/10/07 21:42:22 Entrada: mprfi Algoritmos y salidas: 
+CodificacionBinaria: 1100 1111 10001 101 1000 en codificacion 
+Fecha: 2018/10/07 21:42:22 Entrada: mprfi Algoritmos y salidas: 
+CodificacionBinaria: 1100 1111 10001 101 1000 en codificacion 
+Fecha: 2018/10/07 21:45:40 Entrada: abc Algoritmos y salidas: 
+CodificacionBinaria: 0 1 10 en codificacion 
+Fecha: 2018/10/07 21:45:40 Entrada: abc Algoritmos y salidas: 
+CodificacionBinaria: 0 1 10 en codificacion 
+Fecha: 2018/10/07 21:46:38 Entrada: 0 1 10 Algoritmos y salidas: 
+CodificacionBinaria: abcen decodificacion 
+Fecha: 2018/10/07 21:46:38 Entrada: 0 1 10 Algoritmos y salidas: 
+CodificacionBinaria: abcen decodificacion 
+Fecha: 2018/10/07 21:49:37 Entrada: holaaa Algoritmos y salidas: 
+CodificacionBinaria: 111 1110 1011 0 0 0 en codificacion 
+Fecha: 2018/10/07 21:49:37 Entrada: holaaa Algoritmos y salidas: 
+CodificacionBinaria: 111 1110 1011 0 0 0 en codificacion 
+Fecha: 2018/10/07 21:49:43 Entrada: holaaa Algoritmos y salidas: 
+CodigoTelefonico: 71 32 02 01 01 01 en codificacion 
+Fecha: 2018/10/07 21:49:43 Entrada: holaaa Algoritmos y salidas: 
+CodigoTelefonico: 71 32 02 01 01 01 en codificacion 
+Fecha: 2018/10/07 21:50:03 Entrada: 71 32 02 01 01 01 Algoritmos y salidas: 
+CodigoTelefonico: holaaaen decodificacion 
+Fecha: 2018/10/07 21:50:03 Entrada: 71 32 02 01 01 01 Algoritmos y salidas: 
+CodigoTelefonico: holaaaen decodificacion 
+Fecha: 2018/10/07 21:50:17 Entrada: 71 32 02 01 01 01 Algoritmos y salidas: 
+PalabraClave: ru ru ru ru ru ru en decodificacion 
+Fecha: 2018/10/07 21:50:17 Entrada: 71 32 02 01 01 01 Algoritmos y salidas: 
+PalabraClave: ru ru ru ru ru ru en decodificacion 
+Fecha: 2018/10/07 21:51:22 Entrada: holaaa Algoritmos y salidas: 
+CodificacionBinaria: 111 1110 1011 0 0 0 en codificacion 
+Fecha: 2018/10/07 21:51:23 Entrada: holaaa Algoritmos y salidas: 
+CodificacionBinaria: 111 1110 1011 0 0 0 en codificacion 
+Fecha: 2018/10/07 21:51:36 Entrada: ozdgje Algoritmos y salidas: 
+CodigoTelefonico: 32 33 31 61 91 41 en codificacion 
+Fecha: 2018/10/07 21:51:36 Entrada: ozdgje Algoritmos y salidas: 
+CodigoTelefonico: 32 33 31 61 91 41 en codificacion 
+Fecha: 2018/10/07 21:51:48 Entrada: ozdgje Algoritmos y salidas: 
+CodificacionBinaria: 1110 11001 11 110 1001 100 CodigoTelefonico: 32 33 31 61 91 41 PalabraClave: wophrt en codificacion 
+Fecha: 2018/10/07 21:51:48 Entrada: ozdgje Algoritmos y salidas: 
+CodificacionBinaria: 1110 11001 11 110 1001 100 CodigoTelefonico: 32 33 31 61 91 41 PalabraClave: wophrt en codificacion 
+Fecha: 2018/10/07 21:51:57 Entrada: ozdgje Algoritmos y salidas: 
+CodificacionBinaria: 1110 11001 11 110 1001 100 en codificacion 
+Fecha: 2018/10/07 21:51:57 Entrada: ozdgje Algoritmos y salidas: 
+CodificacionBinaria: 1110 11001 11 110 1001 100 en codificacion 
+Fecha: 2018/10/07 21:51:58 Entrada: ozdgje Algoritmos y salidas: 
+CodigoTelefonico: 32 33 31 61 91 41 en codificacion 
+Fecha: 2018/10/07 21:51:58 Entrada: ozdgje Algoritmos y salidas: 
+CodigoTelefonico: 32 33 31 61 91 41 en codificacion 
+Fecha: 2018/10/07 21:52:00 Entrada: ozdgje Algoritmos y salidas: 
+PalabraClave: wophrt en codificacion 
+Fecha: 2018/10/07 21:52:00 Entrada: ozdgje Algoritmos y salidas: 
+PalabraClave: wophrt en codificacion 
+Fecha: 2018/10/07 21:52:03 Entrada: ozdgje Algoritmos y salidas: 
+CodificacionBinaria: 1110 11001 11 110 1001 100 CodigoTelefonico: 32 33 31 61 91 41 PalabraClave: wophrt en codificacion 
+Fecha: 2018/10/07 21:52:03 Entrada: ozdgje Algoritmos y salidas: 
+CodificacionBinaria: 1110 11001 11 110 1001 100 CodigoTelefonico: 32 33 31 61 91 41 PalabraClave: wophrt en codificacion 
+Fecha: 2018/10/07 21:52:04 Entrada: ozdgje Algoritmos y salidas: 
+CodificacionBinaria: 1110 11001 11 110 1001 100 CodigoTelefonico: 32 33 31 61 91 41 PalabraClave: wophrt en codificacion 
+Fecha: 2018/10/07 21:52:04 Entrada: ozdgje Algoritmos y salidas: 
+CodificacionBinaria: 1110 11001 11 110 1001 100 CodigoTelefonico: 32 33 31 61 91 41 PalabraClave: wophrt en codificacion 
+Fecha: 2018/10/07 21:52:04 Entrada: ozdgje Algoritmos y salidas: 
+CodificacionBinaria: 1110 11001 11 110 1001 100 CodigoTelefonico: 32 33 31 61 91 41 PalabraClave: wophrt en codificacion 
+Fecha: 2018/10/07 21:52:04 Entrada: ozdgje Algoritmos y salidas: 
+CodificacionBinaria: 1110 11001 11 110 1001 100 CodigoTelefonico: 32 33 31 61 91 41 PalabraClave: wophrt en codificacion 
+Fecha: 2018/10/07 21:52:05 Entrada: ozdgje Algoritmos y salidas: 
+CodificacionBinaria: 1110 11001 11 110 1001 100 CodigoTelefonico: 32 33 31 61 91 41 PalabraClave: wophrt en codificacion 
+Fecha: 2018/10/07 21:52:05 Entrada: ozdgje Algoritmos y salidas: 
+CodificacionBinaria: 1110 11001 11 110 1001 100 CodigoTelefonico: 32 33 31 61 91 41 PalabraClave: wophrt en codificacion 
+Fecha: 2018/10/07 21:53:11 Entrada: holaaaa Algoritmos y salidas: 
+CodificacionBinaria: 111 1110 1011 0 0 0 0 CodigoTelefonico: 71 32 02 01 01 01 01 Transposicion: aaaaloh en codificacion 
+Fecha: 2018/10/07 21:53:11 Entrada: holaaaa Algoritmos y salidas: 
+CodificacionBinaria: 111 1110 1011 0 0 0 0 CodigoTelefonico: 71 32 02 01 01 01 01 Transposicion: aaaaloh en codificacion 
+Fecha: 2018/10/07 21:53:11 Entrada: holaaaa Algoritmos y salidas: 
+CodificacionBinaria: 111 1110 1011 0 0 0 0 CodigoTelefonico: 71 32 02 01 01 01 01 Transposicion: aaaaloh en codificacion 
+Fecha: 2018/10/07 21:57:14 Entrada: holaaa Algoritmos y salidas: 
+CodificacionBinaria: 111 1110 1011 0 0 0 CodigoTelefonico: 71 32 02 01 01 01 Transposicion: aaaloh en codificacion 
+Fecha: 2018/10/07 21:57:14 Entrada: holaaa Algoritmos y salidas: 
+CodificacionBinaria: 111 1110 1011 0 0 0 CodigoTelefonico: 71 32 02 01 01 01 Transposicion: aaaloh en codificacion 
+Fecha: 2018/10/07 21:57:28 Entrada: holaaa Algoritmos y salidas: 
+CodificacionBinaria: 111 1110 1011 0 0 0 CodigoTelefonico: 71 32 02 01 01 01 Transposicion: aaaloh en codificacion 
+Fecha: 2018/10/07 21:57:28 Entrada: holaaa Algoritmos y salidas: 
+CodificacionBinaria: 111 1110 1011 0 0 0 CodigoTelefonico: 71 32 02 01 01 01 Transposicion: aaaloh en codificacion 
+Fecha: 2018/10/07 21:59:08 Entrada: jnkm Algoritmos y salidas: 
+CodificacionBinaria: 1001 1101 1010 1100 CodigoTelefonico: 91 22 null 12 Transposicion: mknj en codificacion 
+Fecha: 2018/10/07 21:59:08 Entrada: jnkm Algoritmos y salidas: 
+CodificacionBinaria: 1001 1101 1010 1100 CodigoTelefonico: 91 22 null 12 Transposicion: mknj en codificacion 
+Fecha: 2018/10/07 21:59:08 Entrada: jnkm Algoritmos y salidas: 
+CodificacionBinaria: 1001 1101 1010 1100 CodigoTelefonico: 91 22 null 12 Transposicion: mknj en codificacion 
+Fecha: 2018/10/07 22:00:21 Entrada: bebe Algoritmos y salidas: 
+CodificacionBinaria: 1 100 1 100 CodigoTelefonico: 11 41 11 41 Transposicion: ebeb en codificacion 
+Fecha: 2018/10/07 22:00:21 Entrada: bebe Algoritmos y salidas: 
+CodificacionBinaria: 1 100 1 100 CodigoTelefonico: 11 41 11 41 Transposicion: ebeb en codificacion 
+Fecha: 2018/10/07 22:00:21 Entrada: bebe Algoritmos y salidas: 
+CodificacionBinaria: 1 100 1 100 CodigoTelefonico: 11 41 11 41 Transposicion: ebeb en codificacion 
+Fecha: 2018/10/07 22:00:21 Entrada: bebe Algoritmos y salidas: 
+CodificacionBinaria: 1 100 1 100 CodigoTelefonico: 11 41 11 41 Transposicion: ebeb en codificacion 
+Fecha: 2018/10/07 22:07:40 Entrada: holaaaa Algoritmos y salidas: 
+CodificacionBinaria: 111 1110 1011 0 0 0 0 CodigoTelefonico: 71 32 02 01 01 01 01 Transposicion: aaaaloh en codificacion 
+Fecha: 2018/10/07 22:07:40 Entrada: holaaaa Algoritmos y salidas: 
+CodificacionBinaria: 111 1110 1011 0 0 0 0 CodigoTelefonico: 71 32 02 01 01 01 01 Transposicion: aaaaloh en codificacion 
+Fecha: 2018/10/07 22:07:40 Entrada: holaaaa Algoritmos y salidas: 
+CodificacionBinaria: 111 1110 1011 0 0 0 0 CodigoTelefonico: 71 32 02 01 01 01 01 Transposicion: aaaaloh en codificacion 
+Fecha: 2018/10/07 22:07:40 Entrada: holaaaa Algoritmos y salidas: 
+CodificacionBinaria: 111 1110 1011 0 0 0 0 CodigoTelefonico: 71 32 02 01 01 01 01 Transposicion: aaaaloh en codificacion 
+Fecha: 2018/10/07 22:07:50 Entrada: holaaaa Algoritmos y salidas: 
+CodigoTelefonico: 71 32 02 01 01 01 01 en codificacion 
+Fecha: 2018/10/07 22:07:50 Entrada: holaaaa Algoritmos y salidas: 
+CodigoTelefonico: 71 32 02 01 01 01 01 en codificacion 
+Fecha: 2018/10/07 22:08:31 Entrada: holaaa Algoritmos y salidas: 
+CodificacionBinaria: 111 1110 1011 0 0 0 CodigoTelefonico: 71 32 02 01 01 01 Transposicion: aaaloh en codificacion 
+Fecha: 2018/10/07 22:08:31 Entrada: holaaa Algoritmos y salidas: 
+CodificacionBinaria: 111 1110 1011 0 0 0 CodigoTelefonico: 71 32 02 01 01 01 Transposicion: aaaloh en codificacion 
+Fecha: 2018/10/07 22:08:31 Entrada: holaaa Algoritmos y salidas: 
+CodificacionBinaria: 111 1110 1011 0 0 0 CodigoTelefonico: 71 32 02 01 01 01 Transposicion: aaaloh en codificacion 
+Fecha: 2018/10/07 22:08:31 Entrada: holaaa Algoritmos y salidas: 
+CodificacionBinaria: 111 1110 1011 0 0 0 CodigoTelefonico: 71 32 02 01 01 01 Transposicion: aaaloh en codificacion 
+Fecha: 2018/10/07 22:08:31 Entrada: holaaa Algoritmos y salidas: 
+CodificacionBinaria: 111 1110 1011 0 0 0 CodigoTelefonico: 71 32 02 01 01 01 Transposicion: aaaloh en codificacion 
+Fecha: 2018/10/07 22:08:31 Entrada: holaaa Algoritmos y salidas: 
+CodificacionBinaria: 111 1110 1011 0 0 0 CodigoTelefonico: 71 32 02 01 01 01 Transposicion: aaaloh en codificacion 
+Fecha: 2018/10/07 22:08:31 Entrada: holaaa Algoritmos y salidas: 
+CodificacionBinaria: 111 1110 1011 0 0 0 CodigoTelefonico: 71 32 02 01 01 01 Transposicion: aaaloh en codificacion 
+Fecha: 2018/10/07 22:11:13 Entrada: holaaa Algoritmos y salidas: 
+CodificacionBinaria: 111 1110 1011 0 0 0 CodigoTelefonico: 71 32 02 01 01 01 Transposicion: aaaloh en codificacion 
+Fecha: 2018/10/07 22:11:13 Entrada: holaaa Algoritmos y salidas: 
+CodificacionBinaria: 111 1110 1011 0 0 0 CodigoTelefonico: 71 32 02 01 01 01 Transposicion: aaaloh en codificacion 
+Fecha: 2018/10/07 22:11:13 Entrada: holaaa Algoritmos y salidas: 
+CodificacionBinaria: 111 1110 1011 0 0 0 CodigoTelefonico: 71 32 02 01 01 01 Transposicion: aaaloh en codificacion 
+Fecha: 2018/10/07 22:11:13 Entrada: holaaa Algoritmos y salidas: 
+CodificacionBinaria: 111 1110 1011 0 0 0 CodigoTelefonico: 71 32 02 01 01 01 Transposicion: aaaloh en codificacion 
+Fecha: 2018/10/07 22:11:25 Entrada: holaaa Algoritmos y salidas: 
+CodigoTelefonico: 71 32 02 01 01 01 en codificacion 
+Fecha: 2018/10/07 22:11:25 Entrada: holaaa Algoritmos y salidas: 
+CodigoTelefonico: 71 32 02 01 01 01 en codificacion 
+Fecha: 2018/10/07 22:13:33 Entrada: holaaa Algoritmos y salidas: 
+CodificacionBinaria: 111 1110 1011 0 0 0 CodigoTelefonico: 71 32 02 01 01 01 Transposicion: aaaloh en codificacion 
+Fecha: 2018/10/07 22:13:33 Entrada: holaaa Algoritmos y salidas: 
+CodificacionBinaria: 111 1110 1011 0 0 0 CodigoTelefonico: 71 32 02 01 01 01 Transposicion: aaaloh en codificacion 
+Fecha: 2018/10/07 22:13:33 Entrada: holaaa Algoritmos y salidas: 
+CodificacionBinaria: 111 1110 1011 0 0 0 CodigoTelefonico: 71 32 02 01 01 01 Transposicion: aaaloh en codificacion 
+Fecha: 2018/10/07 22:13:33 Entrada: holaaa Algoritmos y salidas: 
+CodificacionBinaria: 111 1110 1011 0 0 0 CodigoTelefonico: 71 32 02 01 01 01 Transposicion: aaaloh en codificacion 
+Fecha: 2018/10/07 22:13:43 Entrada: holaaa Algoritmos y salidas: 
+PalabraClave: qdxjpm en codificacion 
+Fecha: 2018/10/07 22:13:43 Entrada: holaaa Algoritmos y salidas: 
+PalabraClave: qdxjpm en codificacion 
+Fecha: 2018/10/07 22:16:15 Entrada: jnkcsma Algoritmos y salidas: 
+CodificacionBinaria: 1001 1101 1010 10 10010 1100 0 CodigoTelefonico: 91 22 null 21 72 12 01 Transposicion: amscknj en codificacion 
+Fecha: 2018/10/07 22:16:15 Entrada: jnkcsma Algoritmos y salidas: 
+CodificacionBinaria: 1001 1101 1010 10 10010 1100 0 CodigoTelefonico: 91 22 null 21 72 12 01 Transposicion: amscknj en codificacion 
+Fecha: 2018/10/07 22:16:15 Entrada: jnkcsma Algoritmos y salidas: 
+CodificacionBinaria: 1001 1101 1010 10 10010 1100 0 CodigoTelefonico: 91 22 null 21 72 12 01 Transposicion: amscknj en codificacion 
+Fecha: 2018/10/07 22:16:15 Entrada: jnkcsma Algoritmos y salidas: 
+CodificacionBinaria: 1001 1101 1010 10 10010 1100 0 CodigoTelefonico: 91 22 null 21 72 12 01 Transposicion: amscknj en codificacion 
+Fecha: 2018/10/07 22:16:33 Entrada: jnkcsma Algoritmos y salidas: 
+PalabraClave: yzldhyb en codificacion 
+Fecha: 2018/10/07 22:16:33 Entrada: jnkcsma Algoritmos y salidas: 
+PalabraClave: yzldhyb en codificacion 
+Fecha: 2018/10/07 22:17:00 Entrada: hellocmycfriends Algoritmos y salidas: 
+PalabraClave: wqmmdonzrrsjtzet en codificacion 
+Fecha: 2018/10/07 22:17:00 Entrada: hellocmycfriends Algoritmos y salidas: 
+PalabraClave: wqmmdonzrrsjtzet en codificacion 
+Fecha: 2018/10/07 22:17:17 Entrada: dgpr Algoritmos y salidas: 
+CodificacionBinaria: 11 110 1111 10001 en codificacion 
+Fecha: 2018/10/07 22:17:17 Entrada: dgpr Algoritmos y salidas: 
+CodificacionBinaria: 11 110 1111 10001 en codificacion 
+Fecha: 2018/10/07 22:17:47 Entrada: 11 110 1111 10001 Algoritmos y salidas: 
+CodificacionBinaria: dgpren decodificacion 
+Fecha: 2018/10/07 22:17:47 Entrada: 11 110 1111 10001 Algoritmos y salidas: 
+CodificacionBinaria: dgpren decodificacion 

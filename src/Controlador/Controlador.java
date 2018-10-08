@@ -108,10 +108,12 @@ public class Controlador implements IValidable {
 
     public DTO_Comunicacion procesarPeticion(DTO_Comunicacion datos) {
         predefinirAlfabeto(datos);
-     //   if (!validar(datos)){
-     //       JOptionPane.showMessageDialog(null, "Error en datos en entrada", "Error", JOptionPane.ERROR_MESSAGE);
-     //       return datos;
-     //   }
+         if(datos.isCodificacion()==true){
+            if (!validar(datos)){
+                JOptionPane.showMessageDialog(null, "Error en datos en entrada", "Error", JOptionPane.ERROR_MESSAGE);
+                return datos;
+           }
+         }
         for (String algoritmo : datos.getTipos_algoritmos()) {
             this.algoritmo = getAlgoritmo(algoritmo);
             if (this.algoritmo instanceof AlgVigenere) {
@@ -154,13 +156,16 @@ public class Controlador implements IValidable {
         }
         for (int i=0; i<datos.getEntrada().length(); i++){
             char letra = datos.getEntrada().charAt(i);
-            if (this.alfabetoActual.getSimbolos().indexOf(letra) == -1 
-                || this.alfabetoActual.getSimbolos_ignorados().indexOf(letra) == -1){
+            if (this.alfabetoActual.getSimbolos().indexOf(letra) == -1){
+                if(this.alfabetoActual.getSimbolos().indexOf(letra)==-1){
                 return false;
+                }
             }
         }
-        if (datos.getTipos_algoritmos().isEmpty() || datos.getTipos_salida().isEmpty()){
-            return false;
+        if(datos.isGenerar()!=true){
+            if (datos.getTipos_algoritmos().isEmpty() || datos.getTipos_salida().isEmpty()){
+                return false;
+            }
         }
         return true;
     }
